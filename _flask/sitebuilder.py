@@ -17,6 +17,13 @@ freezer = Freezer(app)
 def index():
     return render_template('index.html', pages=pages)
 
+@app.route('/posts')
+def posts():
+    print "HERE"
+    for i in pages:
+        print i
+    return render_template('posts.html', pages=pages)
+
 @app.route('/tag/<string:tag>/')
 def tag(tag):
     tagged = [p for p in pages if tag in p.meta.get('tags', [])]

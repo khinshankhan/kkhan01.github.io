@@ -5,26 +5,26 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Framework CSS -->
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/k_0.png')}}"/>
+    <link rel="shortcut icon" type="image/png" href="/static/img/k_0.png"/>
     <!-- Javascript -->
     <!-- JQUERY -->
     <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
-      {% block c_title %}
-      {% endblock %}
+      
+      
     </title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}"/>
-    {% block style %}
-    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
+    
+    
 
   </head>
 
@@ -34,19 +34,19 @@
     <header>
       <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" class="brand-logo" href="{{ url_for('index') }}">
-            <img id="logo" src="{{ url_for('static', filename='img/k_0.png') }}" alt="K Logo">
+          <a id="logo-container" class="brand-logo" href="/">
+            <img id="logo" src="/static/img/k_0.png" alt="K Logo">
           </a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('index') }}">About</a></li>
-	    <li><a href="{{ url_for('posts') }}">Posts</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+	    <li><a href="/posts">Posts</a></li>
           </ul>
           
           <ul id="nav-mobile" class="sidenav">
-	    <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('index') }}">About</a></li>
-	    <li><a href="{{ url_for('posts') }}">Posts</a></li>
+	    <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+	    <li><a href="/posts">Posts</a></li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -57,12 +57,48 @@
     <main>
       <div class="container">
         <div class="header">
-          {% block header %}
-          {% endblock %}
+          
+          
         </div>
         <div class="content">
-          {% block content %}
-          {% endblock %}
+          
+<h2>List of stuff</h2>
+
+
+<ul class="collection" id="collection">
+  
+  <li class="collection-item avatar" id="item-template">
+    <span class=First Post!>First Post!</span>
+    <p>2018-05-30</p>
+    <a href="/bye/" class="secondary-content"><i class="material-icons">navigate_next</i></a>
+  </li>
+  
+  <li class="collection-item avatar" id="item-template">
+    <span class=First Post!>First Post!</span>
+    <p>2018-04-04</p>
+    <a href="/first-post/" class="secondary-content"><i class="material-icons">navigate_next</i></a>
+  </li>
+  
+  <li class="collection-item avatar" id="item-template">
+    <span class=Hello World>Hello World</span>
+    <p>2018-04-01</p>
+    <a href="/hello-world/" class="secondary-content"><i class="material-icons">navigate_next</i></a>
+  </li>
+  
+  <li class="collection-item avatar" id="item-template">
+    <span class=First Post!>First Post!</span>
+    <p>2018-01-04</p>
+    <a href="/hello/" class="secondary-content"><i class="material-icons">navigate_next</i></a>
+  </li>
+  
+  <li class="collection-item avatar" id="item-template">
+    <span class=hi!>hi!</span>
+    <p>2012-01-04</p>
+    <a href="/hi/" class="secondary-content"><i class="material-icons">navigate_next</i></a>
+  </li>
+  
+</ul>
+
         </div>
       </div>
     </main>
@@ -81,24 +117,17 @@
     </footer>
 
     <!-- Materialize JS for optimized loading -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
     <!-- initialize sidebar -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/sidenavInit.js') }}"></script>
+    <script type="text/javascript" src="/static/js/sidenavInit.js"></script>
     <!-- Materialize toast flash -->
     
     <script>
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      {% for message in messages %}
-      M.toast({
-      html: '{{ message }}',
-      displayLength: 4000
-      });
-      {% endfor %}
-      {% endif %}
-      {% endwith %}
+      
+      
+      
     </script>
-    {% block scripts %}
-    {% endblock %}
+    
+    
   </body>
 </html>
