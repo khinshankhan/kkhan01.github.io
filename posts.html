@@ -44,8 +44,8 @@
             <li><a href="/">About</a></li>
 	    <!--<li><a href="/posts">Posts</a></li>-->
 	    <li>
-	      <form method="get" action="static/files/resume.pdf">
-		<button type="submit">Resume</button>
+	      <form id="form_resume" method="get" action="static/files/resume.pdf">
+		<a href="javascript:{}" onclick="document.getElementById('form_resume').submit(); return false;">Resume</a>
 	      </form>
 	    </li>
           </ul>
