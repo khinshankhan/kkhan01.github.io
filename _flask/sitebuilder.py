@@ -1,6 +1,6 @@
 import sys
 
-from flask import Flask, render_template, redirect, url_for, flash, request
+from flask import Flask, render_template, redirect, url_for, flash, request, send_file
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 
@@ -34,6 +34,16 @@ def page(path):
     page = pages.get_or_404(path)
     return render_template('page.html', page=page)
 
+@app.route('/resume/')
+def resume():
+    return return_files('static/files/resume.pdf', 'resume.pdf')
+
+def return_files(path, name):
+    try:
+	return send_file(path, attachment_filename=name)
+    except Exception as e:
+	return str(e)
+            
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "build":
         freezer.freeze()

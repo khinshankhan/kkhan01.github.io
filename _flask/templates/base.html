@@ -7,6 +7,8 @@
     <!-- Framework CSS -->
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Favicon -->
@@ -40,13 +42,15 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('index') }}">About</a></li>
-	    <li><a href="{{ url_for('posts') }}">Posts</a></li>
+	    <!--<li><a href="{{ url_for('posts') }}">Posts</a></li>-->
+	    <li><a href="{{ url_for('resume') }}">Resume</a></li>
           </ul>
           
           <ul id="nav-mobile" class="sidenav">
 	    <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('index') }}">About</a></li>
-	    <li><a href="{{ url_for('posts') }}">Posts</a></li>
+	    <!--<li><a href="{{ url_for('posts') }}">Posts</a></li>-->
+	    <li><a href="{{ url_for('resume') }}">Resume</a></li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -71,34 +75,46 @@
     <footer class="page-footer teal">
       <div class="footer-copyright">
         <div class="container">
-          Made by <a class="brown-text text-lighten-3" href="https://github.com/kkhan01/kkhan01.github.io">Khinshan Khan</a> &copy;
+          Made by Khinshan Khan &copy;
           <span id="copyright">
             <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
           </span>
-        </div>
-      </div>
-      <!--Produced by Khinshan Khan-->
-    </footer>
+	  <div class="social right">
+	    <a class="white-text text-lighten-3" href="https://github.com/kkhan01">
+	      <i class="fab fa-github"></i>
+	    </a>
+	    <a class="white-text text-lighten-3" href="https://linkedin.com/in/khinshankhan">
+	      <i class="fab fa-linkedin-in"></i>
+	    </a>
+	    <a class="white-text text-lighten-3" href="https://fb.com/khinshan.khan">
+	      <i class="fab fa-facebook-f"></i>
+	    </a>
+	  </div>
+</a>
+</div>
+</div>
+<!--Produced by Khinshan Khan-->
+</footer>
 
-    <!-- Materialize JS for optimized loading -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
-    <!-- initialize sidebar -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/sidenavInit.js') }}"></script>
-    <!-- Materialize toast flash -->
-    
-    <script>
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      {% for message in messages %}
-      M.toast({
-      html: '{{ message }}',
-      displayLength: 4000
-      });
-      {% endfor %}
-      {% endif %}
-      {% endwith %}
-    </script>
-    {% block scripts %}
-    {% endblock %}
-  </body>
+<!-- Materialize JS for optimized loading -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+<!-- initialize sidebar -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/sidenavInit.js') }}"></script>
+<!-- Materialize toast flash -->
+
+<script>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  M.toast({
+  html: '{{ message }}',
+  displayLength: 4000
+  });
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</script>
+{% block scripts %}
+{% endblock %}
+</body>
 </html>
