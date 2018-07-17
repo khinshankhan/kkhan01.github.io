@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Required Meta Tags -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Optional Meta Tags -->
+    {% block meta_tags %}
+    {% endblock %}
     <!-- Framework CSS -->
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

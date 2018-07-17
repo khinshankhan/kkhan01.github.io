@@ -1,7 +1,19 @@
 {% extends "base.html" %}
 
+{% block meta_tags %}
+<meta name="author" content="Khinshan Khan">
+<meta name="description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
+<meta name="keywords" content="Khinshan Khan, Stuyvesant, Daedalus, Computer Science" />
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="7 days">
+
+<meta property="og:title" content="Khinshan Khan | Developer · Designer · Writer" />
+<meta property="og:description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
+<meta property="og:type" content="profile" />
+{% endblock %}
+
 {% block c_title %}
-Khinshan Khan
+Home | Khinshan Khan
 {% endblock %}
 
 {% block content %}
