@@ -1,8 +1,32 @@
 {% extends "base.html" %}
 
+{% block style %}
+<style>
+  a {
+  color:inherit;
+  text-decoration: none;
+  }
+</style>
+{% endblock %}
+
+{% block c_title %}
+{{tagg}} | Tag | Khinshan Khan
+{% endblock %}
+
 {% block content %}
-    <h2>List of stuff tagged <em>{{ tag }}</em></h2>
-    {% with pages=pages  %}
-        {% include "_list.html" %}
-    {% endwith %}
-{% endblock content %}
+
+{% set title =tagg %}
+
+{% with posts=posts, title=title %}
+{% include "includes/_list.html" %}
+{% endwith %}
+
+{% endblock %}
+
+{% block scripts %}
+
+{% with num=5 %}
+{% include "includes/_listjs.html" %}
+{% endwith %}
+
+{% endblock %}

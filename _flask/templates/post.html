@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block c_title %}
+{{post.title}} | Posts | Khinshan Khan
+{% endblock %}
+
+{% block content %}
+{{ post.html|safe }}
+{{ post.title }}
+{{ post.date }}
+{% endblock content %}

@@ -8,16 +8,7 @@
 
     <!-- Custom Meta Tags -->
     
-<meta name="author" content="Khinshan Khan">
-<meta name="description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
-<meta name="keywords" content="Khinshan Khan, Stuyvesant, Daedalus, Computer Science" />
-<meta name="robots" content="index, follow">
-<meta name="revisit-after" content="7 days">
-
-<meta property="og:title" content="Khinshan Khan | Developer · Designer · Writer" />
-<meta property="og:description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
-<meta property="og:type" content="profile" />
-
+    
 
     <!-- Framework CSS -->
     <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
@@ -38,14 +29,20 @@
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
       
-Home | Khinshan Khan
+Posts | Khinshan Khan
 
     </title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
     
-    
+<style>
+  a {
+  color:inherit;
+  text-decoration: none;
+  }
+</style>
+
 
     <!-- Making every page better -->
     <!-- Credit to Mike Flynn (@thatmikeflynn) and Rob McVey (@negative_sleep) for the base code -->
@@ -111,18 +108,24 @@ Home | Khinshan Khan
         <div class="content">
           
 
-<div class="section no-pad-bot" id="index-banner">
-  <div class="container">
-    <br><br>
-    <h1 class="header center teal-text text-lighten-2">Khinshan Khan</h1>
-    <div class="row center">
-      <h5 class="header col s6 m12 light nowrap">Developer · Designer · Writer</h5>
-    </div>
-    <br>
 
-    <!--  -->
+
+
+<table class="highlight" id="myTable">
+  <thead>
+    <tr>
+      <th><h4><b>Posts</b></h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
     
-  </div>
+  </tbody>
+</table>
+
+<div class="col-md-12 center text-center">
+  <span class="left" id="total_reg"></span>
+  <ul class="pagination pager" id="myPager"></ul>
 </div>
 
 
@@ -170,6 +173,26 @@ Home | Khinshan Khan
 
     <!-- Custom Javascript -->
     
-    
+
+
+<script type="text/javascript" src="/static/js/pagination.js"></script>
+
+<script>
+  $(document).ready(function(){
+  $('#myTable').pageMe({
+  pagerSelector:'#myPager',
+  activeColor: 'blue',
+  prevText:'Anterior',
+  nextText:'Siguiente',
+  showPrevNext:true,
+  hidePageNumbers:false,
+  perPage:5
+  });
+  });
+</script>
+
+
+
+
   </body>
 </html>

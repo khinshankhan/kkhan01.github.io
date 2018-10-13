@@ -1,0 +1,16 @@
+<script type="text/javascript" src="{{ url_for('static', filename='js/pagination.js') }}"></script>
+
+<script>
+  $(document).ready(function(){
+  $('#myTable').pageMe({
+  pagerSelector:'#myPager',
+  activeColor: 'blue',
+  prevText:'Anterior',
+  nextText:'Siguiente',
+  showPrevNext:true,
+  hidePageNumbers:false,
+  perPage:{{num}}
+  });
+  });
+</script>
+

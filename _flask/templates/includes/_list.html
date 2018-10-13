@@ -1,0 +1,35 @@
+<table class="highlight" id="myTable">
+  <thead>
+    <tr>
+      <th><h4><b>{{title}}</b></h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for page in (posts|sort(attribute='date', reverse = True)) %}
+    {% set path = page.path.split('/')[1] %}
+    <tr>
+      <td>
+        <a href="{{ url_for("post", name=path) }}">
+          <b>{{page.title}}</b>
+          <br>
+          <i>{{page.date}}</i>
+        </a>
+	<br>
+	{% if page.meta.tags|length %}
+        {% for page_tag in page.meta.tags |sort() %}
+	<span class="new badge" data-badge-caption="">
+          <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+	</span>
+        {% endfor %}
+	{% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="col-md-12 center text-center">
+  <span class="left" id="total_reg"></span>
+  <ul class="pagination pager" id="myPager"></ul>
+</div>

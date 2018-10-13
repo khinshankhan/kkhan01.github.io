@@ -1,18 +1,32 @@
 {% extends "base.html" %}
 
+{% block style %}
+<style>
+  a {
+  color:inherit;
+  text-decoration: none;
+  }
+</style>
+{% endblock %}
+
+{% block c_title %}
+Posts | Khinshan Khan
+{% endblock %}
+
 {% block content %}
-<h2>List of stuff</h2>
 
+{% set title = "Posts" %}
 
-<ul class="collection" id="collection">
-  {% for page in (pages|sort(attribute='date', reverse = True)) %}
-  <li class="collection-item avatar" id="item-template">
-    <span class={{page.title}}>{{page.title}}</span>
-    <p>{{ page.date }}</p>
-    <a href="{{ url_for("page", path=page.path) }}" class="secondary-content"><i class="material-icons">navigate_next</i></a>
-  </li>
-  {% else %}
-  <li>No stuff.</li>
-  {% endfor %}
-</ul>
-{% endblock content %}
+{% with posts=posts, title=title %}
+{% include "includes/_list.html" %}
+{% endwith %}
+
+{% endblock %}
+
+{% block scripts %}
+
+{% with num=5 %}
+{% include "includes/_listjs.html" %}
+{% endwith %}
+
+{% endblock %}
