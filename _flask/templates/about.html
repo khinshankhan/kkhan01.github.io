@@ -2,8 +2,12 @@
 
 {% block style %}
 <style>
-  .image-layer {
+  .white{
   z-index: 1;
+  }
+  
+  .image-layer {
+  z-index: -1;
   position: absolute;
   left: 0;
   top: 0;
@@ -17,7 +21,7 @@
   }
 
   .frame {
-  z-index: 3;
+  z-index: -1;
   position: absolute;
   left: 0;
   top: 0;
