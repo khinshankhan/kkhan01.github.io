@@ -62,20 +62,21 @@ Home | Khinshan Khan
     <header>
 
   <!-- Blog Dropdown Contents -->
-  <ul id="dropdown1" class="dropdown-content">
+  <ul id="dropdown1" class="dropdown-content" style="color: #fcfcfc;">
     <li><a href="/posts/">Posts</a></li>
     <li><a href="/tags/">Tags</a></li>
     <li class="divider"></li>
   </ul>
 
-  <ul id="dropdown2" class="dropdown-content">
+  <ul id="dropdown2" class="dropdown-content" hstyle="color: #fcfcfc;">
     <li><a href="/posts/">Posts</a></li>
     <li><a href="/tags/">Tags</a></li>
     <li class="divider"></li>
   </ul>
   
-  <nav class="white" role="navigation">
+  <nav class="teal" role="navigation">
     <div class="nav-wrapper container">
+      
       <a id="logo-container" class="brand-logo" href="/">
         <img id="logo" src="/static/img/k_0.png" alt="K Logo">
       </a>
@@ -132,13 +133,18 @@ Home | Khinshan Khan
     </main>
 
     <!-- Footer - Consistent across all pages-->
-    <footer class="page-footer teal">
-  <div class="footer-copyright">
+    <footer class="page-footer" style="background-color: #fcfcfc;">
+  <div class="footer-copyright teal">
     <div class="container">
-      Made by Khinshan Khan &copy;
-      <span id="copyright">
-        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-      </span>
+      
+      <div class="left" style="color: white;">
+	&copy;
+	<span id="copyrightted">
+          <script>document.getElementById('copyrightted').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+	</span>
+	Khinshan Khan
+      </div>
+      
       <div class="social right">
 	<a class="white-text text-lighten-3" href="https://github.com/kkhan01">
 	  <i class="fab fa-github"></i>
@@ -146,13 +152,10 @@ Home | Khinshan Khan
 	<a class="white-text text-lighten-3" href="https://linkedin.com/in/khinshankhan">
 	  <i class="fab fa-linkedin-in"></i>
 	</a>
-	<a class="white-text text-lighten-3" href="https://fb.com/khinshan.khan">
-	  <i class="fab fa-facebook-f"></i>
-	</a>
       </div>
+      
     </div>
   </div>
-  <!--Produced by Khinshan Khan-->
 </footer>
 
     <!-- Materialize JS for optimized loading -->
