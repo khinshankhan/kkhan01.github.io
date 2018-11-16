@@ -1,20 +1,21 @@
 <header>
 
   <!-- Blog Dropdown Contents -->
-  <ul id="dropdown1" class="dropdown-content">
+  <ul id="dropdown1" class="dropdown-content" style="color: #fcfcfc;">
     <li><a href="{{ url_for('posts') }}">Posts</a></li>
     <li><a href="{{ url_for('tags') }}">Tags</a></li>
     <li class="divider"></li>
   </ul>
 
-  <ul id="dropdown2" class="dropdown-content">
+  <ul id="dropdown2" class="dropdown-content" hstyle="color: #fcfcfc;">
     <li><a href="{{ url_for('posts') }}">Posts</a></li>
     <li><a href="{{ url_for('tags') }}">Tags</a></li>
     <li class="divider"></li>
   </ul>
   
-  <nav class="white" role="navigation">
+  <nav class="teal" role="navigation">
     <div class="nav-wrapper container">
+      
       <a id="logo-container" class="brand-logo" href="{{ url_for('index') }}">
         <img id="logo" src="{{ url_for('static', filename='img/k_0.png') }}" alt="K Logo">
       </a>

@@ -1,6 +1,35 @@
+* {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#dropdown {
+    top: auto !important;
+}
+
+body {
+    font-family: Lato;
+    background-color: #fcfcfc;
+}
+
+:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 80%;
+}
+
 nav ul a,
 nav .brand-logo {
-    color: #444;
+    color: white; //#444;
 }
 
 footer.page-footer {
@@ -45,7 +74,7 @@ p {
 }
 
 .sidenav-trigger {
-    color: #26a69a;
+    color: white; //26a69a;
 }
 
 #logo {
@@ -75,9 +104,9 @@ p {
 }
 
 .social [class*="fab fa-"] {
-    background-color: #00bfa5;
+    background-color: #eceff1; //#7e7b90;
     border-radius: 30px;
-    color: #fff;
+    color: #009688;//#fff;
     display: inline-block;
     height: 30px;
     line-height: 30px;
