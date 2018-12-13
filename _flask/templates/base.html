@@ -45,7 +45,9 @@
   <body>
 
     <!-- Navbar - Consistent across all pages-->
+    {% with c="teal" %}
     {% include "includes/navbar.html" %}
+    {% endwith %}
 
     <!-- Actual Page Related-->
     <main>
@@ -62,7 +64,9 @@
     </main>
 
     <!-- Footer - Consistent across all pages-->
+    {% with c="teal" %}
     {% include "includes/footer.html" %}
+    {% endwith %}
 
     <!-- Materialize JS for optimized loading -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
