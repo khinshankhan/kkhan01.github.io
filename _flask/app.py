@@ -20,6 +20,10 @@ PREFIX=""
 def index():
     return render_template('index.html', pages=flatpages)
 
+@app.route(PREFIX+'/home/')
+def home():
+    return render_template('home.html', pages=flatpages)
+
 @app.route(PREFIX+'/about/')
 def about():
     skills = {
