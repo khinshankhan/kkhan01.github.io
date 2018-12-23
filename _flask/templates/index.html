@@ -1,36 +1,79 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block meta_tags %}
-<meta name="author" content="Khinshan Khan">
-<meta name="description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
-<meta name="keywords" content="Khinshan Khan, Stuyvesant, Daedalus, Computer Science" />
-<meta name="robots" content="index, follow">
-<meta name="revisit-after" content="7 days">
-
-<meta property="og:title" content="Khinshan Khan | Developer · Designer · Writer" />
-<meta property="og:description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
-<meta property="og:type" content="profile" />
-{% endblock %}
-
-{% block c_title %}
-Home | Khinshan Khan
-{% endblock %}
-
-{% block content %}
-
-<div class="section no-pad-bot" id="index-banner">
-  <div class="container">
-    <br><br>
-    <h1 class="header center teal-text text-lighten-2">Khinshan Khan</h1>
-    <div class="row center">
-      <h5 class="header col s6 m12 light nowrap">Developer · Designer · Writer</h5>
-    </div>
-    <br>
-
-    <!-- {# {% include "includes/posts_list.html" %} #} -->
+    <!-- Custom Meta Tags -->
     
-  </div>
-</div>
+    <meta name="author" content="Khinshan Khan">
+    <meta name="description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
+    <meta name="keywords" content="Khinshan Khan, Stuyvesant, Daedalus, Computer Science" />
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
 
+    <meta property="og:title" content="Khinshan Khan | Developer · Designer · Writer" />
+    <meta property="og:description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
+    <meta property="og:type" content="profile" />
 
-{% endblock %}
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/static/img/k_0.png"/>
+    
+    <!-- Change the title of the page depending on what's being displayed -->
+    <title>Home | Khinshan Khan</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Barlow:500,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/baseGlitch.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/glitch.css" />
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+  </head>
+  <body class="demo-3 loading">
+    <main>
+      <div class="grid">
+	<div class="grid__item">
+	  <div class="glitch glitch--style-1">
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	  </div>
+	  <h2 class="grid__item-title">Home <span>Road to All</span></h2>
+	</div>
+	<div class="grid__item">
+	  <div class="glitch glitch--style-2">
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	  </div>
+	  <h2 class="grid__item-title">About <span>Mini History</span></h2>
+	</div>
+	<div class="grid__item">
+	  <div class="glitch glitch--vertical glitch--style-3">
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	  </div>
+	  <h2 class="grid__item-title">Resume <span>Humble Flex</span></h2>
+	</div>
+	<div class="grid__item">
+	  <div class="glitch glitch--style-4">
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	    <div class="glitch__img"></div>
+	  </div>
+	  <h2 class="grid__item-title">Blog <span>Some Rantings</span></h2>
+	</div>
+      </div>
+    </main>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/glitch.js"></script>
+  </body>
+</html>
