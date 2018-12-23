@@ -1,182 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    
-    <!-- Required Meta Tags -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Custom Meta Tags -->
-    
-<meta name="author" content="Khinshan Khan">
-<meta name="description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
-<meta name="keywords" content="Khinshan Khan, Stuyvesant, Daedalus, Computer Science" />
-<meta name="robots" content="index, follow">
-<meta name="revisit-after" content="7 days">
-
-<meta property="og:title" content="Khinshan Khan | Developer · Designer · Writer" />
-<meta property="og:description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
-<meta property="og:type" content="profile" />
-
-
-    <!-- Framework CSS -->
-    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="/static/img/k_1.png"/>
-
-    <!-- JQUERY -->
-    <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    
-    <!-- Change the title of the page depending on what's being displayed -->
-    <title>
-      
-Home | Khinshan Khan
-
-    </title>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
-    
-    
-
-    <!-- Making every page better -->
-    <!-- Credit to Mike Flynn (@thatmikeflynn) and Rob McVey (@negative_sleep) for the base code -->
-
-<script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
-
-<script type="text/javascript" src="/static/js/main.js"></script>
-    
-  </head>
-
-  <body>
-
-    <!-- Navbar - Consistent across all pages-->
-    
-    <header>
-
-  <!-- Blog Dropdown Contents -->
-  <ul id="dropdown1" class="dropdown-content" style="color: #fcfcfc;">
-    <li><a href="/posts/">Posts</a></li>
-    <li><a href="/tags/">Tags</a></li>
-    <li class="divider"></li>
-  </ul>
-
-  <ul id="dropdown2" class="dropdown-content" hstyle="color: #fcfcfc;">
-    <li><a href="/posts/">Posts</a></li>
-    <li><a href="/tags/">Tags</a></li>
-    <li class="divider"></li>
-  </ul>
-  
-  <nav class="black" role="navigation">
-    <div class="nav-wrapper container">
-      
-      <a id="logo-container" class="brand-logo" href="/">
-        <img id="logo" src="/static/img/k_0.png" alt="K Logo">
-      </a>
-      
-      <!-- Full Navbar -->
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-	<li><a href="/static/files/resume.pdf">Resume</a></li>
-	<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-      
-      <!-- Mobile Navbar -->
-      <ul id="nav-mobile" class="sidenav">
-	<li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-	<li><a href="/static/files/resume.pdf">Resume</a></li>
-	<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-      
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-</header>
-    
-
-    <!-- Actual Page Related-->
-    <main>
-      <div class="container" id="all">
-        <div class="header">
-          
-          
-        </div>
-        <div class="content">
-          
-
-<div class="section no-pad-bot" id="index-banner">
-  <div class="container">
-    <br><br>
-    <h1 class="header center teal-text text-lighten-2">Khinshan Khan</h1>
-    <div class="row center">
-      <h5 class="header col s6 m12 light nowrap">Developer · Designer · Writer</h5>
-    </div>
-    <br>
-
-    <!--  -->
-    
-  </div>
-</div>
-
-
-
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer - Consistent across all pages-->
-    
-    <footer class="page-footer" style="background-color: #fcfcfc;">
-  <div class="footer-copyright black">
-    <div class="container">
-      
-      <div class="left" style="color: white;">
-	&copy;
-	<span id="copyrightted">
-          <script>document.getElementById('copyrightted').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-	</span>
-	Khinshan Khan
-      </div>
-      
-      <div class="social right">
-	<a class="white-text text-lighten-3" href="https://github.com/kkhan01">
-	  <i class="fab fa-github"></i>
-	</a>
-	<a class="white-text text-lighten-3" href="https://linkedin.com/in/khinshankhan">
-	  <i class="fab fa-linkedin-in"></i>
-	</a>
-      </div>
-      
-    </div>
-  </div>
-</footer>
-    
-
-    <!-- Materialize JS for optimized loading -->
-    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
-    
-    <!-- Initialize all general materialize elements -->
-    <script type="text/javascript" src="/static/js/initMaterialize.js"></script>
-    
-    <!-- Materialize toast flash -->
-    <script>
-      
-      
-      
-    </script>
-
-    <!-- Custom Javascript -->
-    
-    
-  </body>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Glitch Effect | Demo 3 | Codrops</title>
+		<meta name="description" content="A glitch effect using CSS animations and clip-path" />
+		<meta name="keywords" content="glitch, effect, css, animations" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:500,800" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo3.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="demo-3 loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-github" viewBox="0 0 32.6 31.8">
+				<title>github</title>
+				<path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
+			</symbol>
+		</svg>
+		<main>
+			<div class="message">Sorry, your browser does not support clip-path on HTML elements!</div>
+			<div class="content content--top">
+				<header class="codrops-header">
+					<div class="codrops-links">
+						<a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/3d-particle-explorations/" title="Previous Demo"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+						<a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=33498" title="Back to the article"><svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a>
+					</div>
+					<h1 class="codrops-header__title">CSS Glitch Effect</h1>
+					<span class="info">CSS only element glitching with clip-path</span>
+				</header>
+				<a class="github" href="https://github.com/codrops/ImageGlitchEffect/" title="Find this project on GitHub"><svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg></a>
+				<nav class="demos">
+					<a class="demo" href="index.html"><span>Demo 1</span></a>
+					<a class="demo" href="index2.html"><span>Demo 2</span></a>
+					<a class="demo demo--current" href="index3.html"><span>Demo 3</span></a>
+				</nav>
+			</div>
+			<div class="grid">
+				<div class="grid__item">
+					<div class="glitch glitch--style-1">
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+					</div>
+					<h2 class="grid__item-title">Prone <span>Abjectness</span></h2>
+				</div>
+				<div class="grid__item">
+					<div class="glitch glitch--style-2">
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+					</div>
+					<h2 class="grid__item-title">Equal <span>Undertaking</span></h2>
+				</div>
+				<div class="grid__item">
+					<div class="glitch glitch--vertical glitch--style-3">
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+					</div>
+					<h2 class="grid__item-title">Gifted <span>Friendliness</span></h2>
+				</div>
+				<div class="grid__item">
+					<div class="glitch glitch--style-4">
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+					</div>
+					<h2 class="grid__item-title">Past <span>Monotony</span></h2>
+				</div>
+				<div class="grid__item">
+					<div class="glitch glitch--style-5">
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+					</div>
+					<h2 class="grid__item-title">Ground <span>Curtness</span></h2>
+				</div>
+				<div class="grid__item">
+					<div class="glitch glitch--style-6">
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+						<div class="glitch__img"></div>
+					</div>
+					<h2 class="grid__item-title">Wide <span>Distraction</span></h2>
+				</div>
+			</div>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
 </html>
