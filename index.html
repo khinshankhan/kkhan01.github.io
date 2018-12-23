@@ -31,10 +31,7 @@
     <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 
     <script>
-      $('.glitch__img').click(function(e) {
-      e.preventDefault();
-      setTimeout(function(url) { window.location = url }, 5000, this.href);
-      });
+      $(".grid__item").click(function(e) { setTimeout(function() { window.location = e.currentTarget.getAttribute("href"); }, 2000 ); });
     </script>
 
   </head>
