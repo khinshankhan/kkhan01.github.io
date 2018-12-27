@@ -48,7 +48,7 @@ Coming Soon! | Khinshan Khan
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(http://www.windowscentral.com/sites/wpcentral.com/files/styles/larger/public/field/image/2015/06/fallout-4-teaser.jpg?itok=L6Ln4CRc);
+  background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-HD-Classy-Wallpaper-PIC-WPE005391.jpg);
   color: transparent;
   background-size: contain;
   text-shadow: 0 0 30px rgba(0, 0, 0, .5);
@@ -227,6 +227,14 @@ Coming Soon! | Khinshan Khan
 </div>
 <div class="image-layer"></div>
 
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br><br>
+    <h1 class="valign-center white-text">COMING SOON</h1>
+    <p class="valign-center white-text" id="countdown" style="font-size:30px">COUNTDOWN COULD NOT BE RENDERED</p>
+    <br>
+  </div>
+</div>
 
 
         </div>
@@ -276,6 +284,36 @@ Coming Soon! | Khinshan Khan
 
     <!-- Custom Javascript -->
     
-    
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Jan 4, 2019 23:59:59").getTime();
+
+  // Update the count down every 1 second
+  var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="countdown"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+		 clearInterval(countdownfunction);
+		 document.getElementById("countdown").innerHTML = "EXPIRED";
+		 }
+		 }, 1000);
+		 </script>
+
   </body>
 </html>
