@@ -29,27 +29,27 @@
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
       
-Posts | Khinshan Khan
+      Posts | Khinshan Khan
 
     </title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
     
-<style>
-  a {
-  color:inherit;
-  text-decoration: none;
-  }
-</style>
+    <style>
+      a {
+      color:inherit;
+      text-decoration: none;
+      }
+    </style>
 
 
     <!-- Making every page better -->
     <!-- Credit to Mike Flynn (@thatmikeflynn) and Rob McVey (@negative_sleep) for the base code -->
 
-<script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
 
-<script type="text/javascript" src="/static/js/main.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
     
   </head>
 
@@ -59,46 +59,46 @@ Posts | Khinshan Khan
     
     <header>
 
-  <!-- Blog Dropdown Contents -->
-  <ul id="dropdown1" class="dropdown-content" style="color: #fcfcfc;">
-    <li><a href="/posts/">Posts</a></li>
-    <li><a href="/tags/">Tags</a></li>
-    <li class="divider"></li>
-  </ul>
+      <!-- Blog Dropdown Contents -->
+      <ul id="dropdown1" class="dropdown-content" style="color: #fcfcfc;">
+	<li><a href="/posts/">Posts</a></li>
+	<li><a href="/tags/">Tags</a></li>
+	<li class="divider"></li>
+      </ul>
 
-  <ul id="dropdown2" class="dropdown-content" hstyle="color: #fcfcfc;">
-    <li><a href="/posts/">Posts</a></li>
-    <li><a href="/tags/">Tags</a></li>
-    <li class="divider"></li>
-  </ul>
-  
-  <nav class="black" role="navigation">
-    <div class="nav-wrapper container">
-      
-      <a id="logo-container" class="brand-logo" href="/">
-        <img id="logo" src="/static/img/k_0.png" alt="K Logo">
-      </a>
-      
-      <!-- Full Navbar -->
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/home/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-	<li><a href="/static/files/resume.pdf">Resume</a></li>
-	<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
+      <ul id="dropdown2" class="dropdown-content" hstyle="color: #fcfcfc;">
+	<li><a href="/posts/">Posts</a></li>
+	<li><a href="/tags/">Tags</a></li>
+	<li class="divider"></li>
       </ul>
       
-      <!-- Mobile Navbar -->
-      <ul id="nav-mobile" class="sidenav">
-	<li><a href="/home/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-	<li><a href="/static/files/resume.pdf">Resume</a></li>
-	<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-      
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-</header>
+      <nav class="black" role="navigation">
+	<div class="nav-wrapper container">
+	  
+	  <a id="logo-container" class="brand-logo" href="/">
+            <img id="logo" src="/static/img/k_0.png" alt="K Logo">
+	  </a>
+	  
+	  <!-- Full Navbar -->
+	  <ul class="right hide-on-med-and-down">
+            <li><a href="/home/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+	    <li><a href="/static/files/resume.pdf">Resume</a></li>
+	    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
+	  </ul>
+	  
+	  <!-- Mobile Navbar -->
+	  <ul id="nav-mobile" class="sidenav">
+	    <li><a href="/home/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+	    <li><a href="/static/files/resume.pdf">Resume</a></li>
+	    <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
+	  </ul>
+	  
+	  <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	</div>
+      </nav>
+    </header>
     
 
     <!-- Actual Page Related-->
@@ -114,22 +114,22 @@ Posts | Khinshan Khan
 
 
 
-<table class="highlight" id="myTable">
-  <thead>
-    <tr>
-      <th><h4><b>Posts</b></h4></th>
-    </tr>
-  </thead>
+	  <table class="highlight" id="myTable">
+	    <thead>
+	      <tr>
+		<th><h4><b>Posts</b></h4></th>
+	      </tr>
+	    </thead>
 
-  <tbody>
-    
-  </tbody>
-</table>
+	    <tbody>
+	      
+	    </tbody>
+	  </table>
 
-<div class="col-md-12 center text-center">
-  <span class="left" id="total_reg"></span>
-  <ul class="pagination pager" id="myPager"></ul>
-</div>
+	  <div class="col-md-12 center text-center">
+	    <span class="left" id="total_reg"></span>
+	    <ul class="pagination pager" id="myPager"></ul>
+	  </div>
 
 
 
@@ -140,29 +140,29 @@ Posts | Khinshan Khan
     <!-- Footer - Consistent across all pages-->
     
     <footer class="page-footer" style="background-color: #fcfcfc;">
-  <div class="footer-copyright black">
-    <div class="container">
-      
-      <div class="left" style="color: white;">
-	&copy;
-	<span id="copyrightted">
-          <script>document.getElementById('copyrightted').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-	</span>
-	Khinshan Khan
+      <div class="footer-copyright black">
+	<div class="container">
+	  
+	  <div class="left" style="color: white;">
+	    &copy;
+	    <span id="copyrightted">
+              <script>document.getElementById('copyrightted').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+	    </span>
+	    Khinshan Khan
+	  </div>
+	  
+	  <div class="social right">
+	    <a class="white-text text-lighten-3" href="https://github.com/kkhan01">
+	      <i class="fab fa-github"></i>
+	    </a>
+	    <a class="white-text text-lighten-3" href="https://linkedin.com/in/khinshankhan">
+	      <i class="fab fa-linkedin-in"></i>
+	    </a>
+	  </div>
+	  
+	</div>
       </div>
-      
-      <div class="social right">
-	<a class="white-text text-lighten-3" href="https://github.com/kkhan01">
-	  <i class="fab fa-github"></i>
-	</a>
-	<a class="white-text text-lighten-3" href="https://linkedin.com/in/khinshankhan">
-	  <i class="fab fa-linkedin-in"></i>
-	</a>
-      </div>
-      
-    </div>
-  </div>
-</footer>
+    </footer>
     
 
     <!-- Materialize JS for optimized loading -->
@@ -182,21 +182,21 @@ Posts | Khinshan Khan
     
 
 
-<script type="text/javascript" src="/static/js/pagination.js"></script>
+    <script type="text/javascript" src="/static/js/pagination.js"></script>
 
-<script>
-  $(document).ready(function(){
-  $('#myTable').pageMe({
-  pagerSelector:'#myPager',
-  activeColor: 'blue',
-  prevText:'Anterior',
-  nextText:'Siguiente',
-  showPrevNext:true,
-  hidePageNumbers:false,
-  perPage:5
-  });
-  });
-</script>
+    <script>
+      $(document).ready(function(){
+      $('#myTable').pageMe({
+      pagerSelector:'#myPager',
+      activeColor: 'blue',
+      prevText:'Anterior',
+      nextText:'Siguiente',
+      showPrevNext:true,
+      hidePageNumbers:false,
+      perPage:5
+      });
+      });
+    </script>
 
 
 
