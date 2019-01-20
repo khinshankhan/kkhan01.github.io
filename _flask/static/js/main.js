@@ -9,7 +9,7 @@ playAudio = function(file){
 var egg = new Egg();
 
 egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
-    var life = jQuery('<img src="static/img/1up.png"><img>');
+    var life = jQuery('<img src="/static/img/1up.png"><img>');
     life.appendTo('body').css({position: "fixed", top: "200px", right: "100px", "z-index": 99999999});
     life.animate({top: '50px', opacity: 0}, {
 	duration: 1000,
@@ -17,7 +17,7 @@ egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
             jQuery(this).remove();
 	}
     });
-    playAudio('static/audio/1up.wav');
+    playAudio('/static/audio/1up.wav');
 });
 
 
