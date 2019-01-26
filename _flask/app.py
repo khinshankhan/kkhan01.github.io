@@ -28,6 +28,10 @@ def home():
 def about():
     return render_template('about.html')
 
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('default'), 200, {'Content-Type': 'text/css'}
+
 @app.route(PREFIX+"/posts/")
 def posts():
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
