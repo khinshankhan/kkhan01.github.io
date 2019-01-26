@@ -1,4 +1,5 @@
 import sys
+import pygments
 from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer
@@ -27,6 +28,10 @@ def home():
 @app.route(PREFIX+'/about/')
 def about():
     return render_template('about.html')
+
+@app.route(PREFIX+'/pygments.css')
+def pygments_css():
+    return pygments_style_defs('default'), 200, {'Content-Type': 'text/css'}
 
 @app.route(PREFIX+"/posts/")
 def posts():
