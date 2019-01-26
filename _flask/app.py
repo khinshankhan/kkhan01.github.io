@@ -18,7 +18,7 @@ PREFIX=""
 
 @app.route(PREFIX+'/')
 def index():
-    return render_template('index.html', pages=flatpages)
+    return render_template('index.html')
 
 @app.route(PREFIX+'/home/')
 def home():
@@ -26,13 +26,7 @@ def home():
 
 @app.route(PREFIX+'/about/')
 def about():
-    skills = {
-        "HTML": 90,
-        "CSS": 90,
-        "JS": 70,
-        "Sass": 60
-    }
-    return render_template('about.html', skills=skills)
+    return render_template('about.html')
 
 @app.route(PREFIX+"/posts/")
 def posts():
