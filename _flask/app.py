@@ -31,7 +31,7 @@ def about():
 
 @app.route(PREFIX+'/pygments.css')
 def pygments_css():
-    return pygments_style_defs('default'), 200, {'Content-Type': 'text/css'}
+    return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
 
 @app.route(PREFIX+"/posts/")
 def posts():
