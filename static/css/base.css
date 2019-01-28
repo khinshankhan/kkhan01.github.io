@@ -99,10 +99,6 @@ p {
     height: 30vh;
 }
 
-.nowrap{
-    white-space: nowrap;
-}
-
 .social [class*="fab fa-"] {
     background-color: #eceff1; //#7e7b90;
     border-radius: 30px;
