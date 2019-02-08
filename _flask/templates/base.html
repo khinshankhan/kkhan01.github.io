@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+
     <!-- Required Meta Tags -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@
 
     <!-- JQUERY -->
     <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    
+
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
       {% block c_title %}
@@ -39,15 +39,17 @@
 
     <!-- Making every page better -->
     {% include "includes/easter_egg.html" %}
-    
+
   </head>
 
   <body>
 
     <!-- Navbar - Consistent across all pages-->
-    {% with c="black" %}
+    {% block navbar %}
+    {% with c="" %}
     {% include "includes/navbar.html" %}
     {% endwith %}
+    {% endblock %}
 
     <!-- Actual Page Related-->
     <main>
@@ -64,16 +66,18 @@
     </main>
 
     <!-- Footer - Consistent across all pages-->
-    {% with c="black" %}
+    {% block footer %}
+    {% with c="" %}
     {% include "includes/footer.html" %}
     {% endwith %}
+    {% endblock %}
 
     <!-- Materialize JS for optimized loading -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
-    
+
     <!-- Initialize all general materialize elements -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/initMaterialize.js') }}"></script>
-    
+
     <!-- Materialize toast flash -->
     <script>
       {% with messages = get_flashed_messages() %}
