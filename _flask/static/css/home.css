@@ -29,10 +29,18 @@ html, body {
     margin: 0 auto;
 }
 
-h1 { text-transform: uppercase; }
-h1 ~ span, p { color: #2d2d2d; }
-.thin { font-weight: 300; }
-.thick { font-weight: 900; }
+h1 {
+    text-transform: uppercase;
+}
+h1 ~ span, p {
+    color: #2d2d2d;
+}
+.thin {
+    font-weight: 300;
+}
+.thick {
+    font-weight: 900;
+}
 
 p {
     position: absolute;
