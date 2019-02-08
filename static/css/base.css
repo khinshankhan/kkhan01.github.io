@@ -32,10 +32,18 @@ nav .brand-logo {
     color: white; //#444;
 }
 
+nav {
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
+
 footer.page-footer {
     margin: 0;
     padding: 0;
     margin-top: 20px;
+}
+
+footer {
+    background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
 }
 
 body {
@@ -112,8 +120,8 @@ p {
     text-align: center;
 }
 
-.fab:hover{ 
-    background-color: #333; 
+.fab:hover{
+    background-color: #333;
 }
 
 .dropdown-content li > a{
