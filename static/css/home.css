@@ -7,6 +7,10 @@ html, body {
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #page1 {
     background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
 }
@@ -29,10 +33,18 @@ html, body {
     margin: 0 auto;
 }
 
-h1 { text-transform: uppercase; }
-h1 ~ span, p { color: #2d2d2d; }
-.thin { font-weight: 300; }
-.thick { font-weight: 900; }
+h1 {
+    text-transform: uppercase;
+}
+h1 ~ span, p {
+    color: #2d2d2d;
+}
+.thin {
+    font-weight: 300;
+}
+.thick {
+    font-weight: 900;
+}
 
 p {
     position: absolute;
@@ -59,4 +71,16 @@ p {
     60% {
 	transform: translateY(-15px);
     }
+}
+
+a:link{
+    color:#FFFFFF;
+}
+
+a:visited{
+    color:#FFFFFF;
+}
+
+a:hover{
+    color:#FFFFFF;
 }
