@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Lato;
+    color: white;
+}
+
+#page1 {
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
+#page2 {
+    background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
+}
+
+.wrapper {
+    display: table;
+    height: 100%; width: 100%;
+}
+
+.stage {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tabled, .middled {
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 { text-transform: uppercase; }
+h1 ~ span, p { color: #2d2d2d; }
+.thin { font-weight: 300; }
+.thick { font-weight: 900; }
+
+p {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    right: 1em;
+    font-size: 80%;
+}
