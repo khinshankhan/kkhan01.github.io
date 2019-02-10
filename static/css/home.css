@@ -62,7 +62,7 @@ h1 {
 
 h1 ~ span, p {
     color: #2d2d2d;
-    font-size: 150%;
+    font-size: 300%;
 }
 
 .thin {
