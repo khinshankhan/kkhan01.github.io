@@ -1,14 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
 
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Lato;
-    color: white;
+* {
+    box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
+    font-family: Lato;
+}
+
+body {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
 }
 
 #page1 {
@@ -18,27 +28,42 @@ html {
     background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
 }
 
-.wrapper {
-    display: table;
-    height: 100%; width: 100%;
-}
-
-.stage {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.tabled, .middled {
-    text-align: center;
-    margin: 0 auto;
-}
-
 h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    left: 0;
+    font-size: calc(1rem + 3vw);
     text-transform: uppercase;
 }
+
+.a1 {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    left: 0;
+}
+
+.a2 {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    left: 0;
+}
+
 h1 ~ span, p {
     color: #2d2d2d;
 }
+
 .thin {
     font-weight: 300;
 }
@@ -46,16 +71,8 @@ h1 ~ span, p {
     font-weight: 900;
 }
 
-p {
-    position: absolute;
-    bottom: 0;
-    text-align: right;
-    right: 1em;
-    font-size: 80%;
-}
-
-
 .bounce {
+    color:#FFFFFF;
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
