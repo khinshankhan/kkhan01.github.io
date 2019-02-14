@@ -62,7 +62,6 @@ h1 {
 
 h1 ~ span, p {
     color: #2d2d2d;
-    font-size: 300%;
 }
 
 .thin {
@@ -101,4 +100,10 @@ a:visited{
 
 a:hover{
     color:#FFFFFF;
+}
+
+.social{
+    display: flex;
+    justify-content: space-around;
+    //justify-content: space-between;
 }
