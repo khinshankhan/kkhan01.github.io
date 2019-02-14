@@ -101,3 +101,9 @@ a:visited{
 a:hover{
     color:#FFFFFF;
 }
+
+.social{
+    display: flex;
+    justify-content: space-around;
+    //justify-content: space-between;
+}
