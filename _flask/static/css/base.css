@@ -33,7 +33,7 @@ nav .brand-logo {
 }
 
 nav {
-    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    background: linear-gradient(to bottom, #ff99cc 0%, #444444 60%, #ff99cc 100%);
 }
 
 footer.page-footer {
@@ -43,7 +43,7 @@ footer.page-footer {
 }
 
 footer {
-    background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
+    background: linear-gradient(to bottom, #ff99cc 0%, #444444 60%, #ff99cc 100%);
 }
 
 body {
@@ -110,7 +110,7 @@ p {
 .social [class*="fab fa-"] {
     background-color: #eceff1; //#7e7b90;
     border-radius: 30px;
-    color: #009688;//#fff;
+    color: #99004d;//#fff;
     display: inline-block;
     height: 30px;
     line-height: 30px;
