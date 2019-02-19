@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -21,23 +21,9 @@
       }
 
       body {
-	  scroll-snap-type: mandatory;
-	  scroll-snap-points-y: repeat(100vh);
-	  scroll-snap-type: y mandatory;
       }
 
       section {
-	  height: 100vh;
-	  scroll-snap-align: start;
-	  text-align: center;
-	  position: relative;
-      }
-
-      #page1 {
-	  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
-      }
-      #page2 {
-	  background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
       }
 
       h1 {
@@ -114,27 +100,22 @@
 	  color:#FFFFFF;
       }
 
-      .social{
-	  display: flex;
-	  justify-content: space-around;
-	  //justify-content: space-between;
-      }
     </style>
   </head>
 
-  <body>
+  <body style="scroll-snap-type: mandatory;scroll-snap-points-y: repeat(100vh);scroll-snap-type: y mandatory;">
 
     <div class="slider">
 
-      <section id="page1">
+      <section id="page1" style="background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); height: 100vh;scroll-snap-align: start;text-align: center;position: relative;">
 	<h1><span class="thin">Khinshan</span><span class="thick">Khan</span></h1>
 	<span class="thick a1"><i class="material-icons bounce">arrow_drop_down</i></span>
       </section>
 
-      <section id="page2">
+      <section id="page2" style="background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%); height: 100vh;scroll-snap-align: start;text-align: center;position: relative;">
 	<span class="thick a2"><i class="material-icons bounce">arrow_drop_up</i></span>
 	<h1><span>
-	    <div class="social">
+	    <div class="social" style="display: flex;justify-content: space-around;">
 
 	      <a class="white-text text-lighten-3" href="https://khinshankhan.com">
 		<i class="fas fa-home"></i>
