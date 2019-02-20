@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Custom Meta Tags -->
-    
-    
+
+
 
     <!-- Framework CSS -->
     <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
@@ -29,19 +29,19 @@
 
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
-      
+
       Coming Soon! | Khinshan Khan
 
     </title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
-    
+
     <style>
       .white{
 	  z-index: 3 !important;
       }
-      
+
       .image-layer {
 	  z-index: -3;
 	  position: absolute;
@@ -167,8 +167,8 @@
   <body>
 
     <!-- Navbar - Consistent across all pages-->
-    
-    
+
+
     <header>
 
       <!-- Blog Dropdown Contents -->
@@ -183,14 +183,14 @@
 	<li><a href="/tags/">Tags</a></li>
 	<li class="divider"></li>
       </ul>
-      
+
       <nav class="" role="navigation">
 	<div class="nav-wrapper container">
-	  
+
 	  <a id="logo-container" class="brand-logo" href="/">
             <img id="logo" src="/static/img/k_0.png" alt="K Logo">
 	  </a>
-	  
+
 	  <!-- Full Navbar -->
 	  <ul class="right hide-on-med-and-down">
             <li><a href="/home/">Home</a></li>
@@ -198,7 +198,7 @@
 	    <li><a href="https://kkhan01.github.io/resume/resume.pdf">Resume</a></li>
 	    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
 	  </ul>
-	  
+
 	  <!-- Mobile Navbar -->
 	  <ul id="nav-mobile" class="sidenav">
 	    <li><a href="/home/">Home</a></li>
@@ -206,23 +206,23 @@
 	    <li><a href="https://kkhan01.github.io/resume/resume.pdf">Resume</a></li>
 	    <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
 	  </ul>
-	  
+
 	  <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 	</div>
       </nav>
     </header>
-    
-    
+
+
 
     <!-- Actual Page Related-->
     <main>
       <div class="container" id="all">
         <div class="header">
-          
-          
+
+
         </div>
         <div class="content">
-          
+
 	  <div class="frame">
 	    <div></div>
 	    <div></div>
@@ -245,12 +245,12 @@
     </main>
 
     <!-- Footer - Consistent across all pages-->
-    
-    
+
+
     <footer class="page-footer" style="background-color: #fcfcfc;">
       <div class="footer-copyright ">
 	<div class="container">
-	  
+
 	  <div class="left" style="color: white;">
 	    &copy;
 	    <span id="copyrightted">
@@ -258,7 +258,7 @@
 	    </span>
 	    Khinshan Khan
 	  </div>
-	  
+
 	  <div class="social right">
 	    <a class="white-text text-lighten-3" href="https://github.com/kkhan01">
 	      <i class="fab fa-github"></i>
@@ -267,12 +267,12 @@
 	      <i class="fab fa-linkedin-in"></i>
 	    </a>
 	  </div>
-	  
+
 	</div>
       </div>
     </footer>
-    
-    
+
+
 
     <!-- Materialize JS for optimized loading -->
     <script type="text/javascript" src="/static/js/materialize.min.js"></script>
@@ -282,37 +282,37 @@
 
     <!-- Materialize toast flash -->
     <script>
-      
-      
-      
+
+
+
     </script>
 
     <!-- Custom Javascript -->
-    
+
     <script>
       // Set the date we're counting down to
-      var countDownDate = new Date("Jan 21, 2019 23:59:59").getTime();
+      var countDownDate = new Date("Feb 27, 2019 23:59:59").getTime();
 
       // Update the count down every 1 second
       var countdownfunction = setInterval(function() {
 
 	  // Get todays date and time
 	  var now = new Date().getTime();
-	  
+
 	  // Find the distance between now an the count down date
 	  var distance = countDownDate - now;
-	  
+
 	  // Time calculations for days, hours, minutes and seconds
 	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-	  
+
 	  // Output the result in an element with id="countdown"
 	  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
 	      + minutes + "m " + seconds + "s ";
-	  
-	  // If the count down is over, write some text 
+
+	  // If the count down is over, write some text
 	  if (distance < 0) {
 	      clearInterval(countdownfunction);
 	      document.getElementById("countdown").innerHTML = "EXPIRED";
