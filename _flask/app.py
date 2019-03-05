@@ -1,7 +1,7 @@
 import sys
-import pygments
-from flask import Flask, render_template, redirect, url_for, flash, request
-from flask_flatpages import FlatPages, pygments_style_defs
+import pygments, markdown
+from flask import Flask, render_template, render_template_string, redirect, url_for, flash, request
+from flask_flatpages import FlatPages, pygmented_markdown, pygments_style_defs
 from flask_frozen import Freezer
 
 DEBUG = True
@@ -10,7 +10,13 @@ FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
 POST_DIR = 'posts'
 
+def my_markdown(text):
+    markdown_text = render_template_string(text)
+    pygmented_text = markdown.markdown(markdown_text, extensions=["codehilite", "fenced_code", "tables"])
+    return pygmented_text
+
 app = Flask(__name__)
+app.config["FLATPAGES_HTML_RENDERER"] = my_markdown
 app.config.from_object(__name__)
 flatpages = FlatPages(app)
 freezer = Freezer(app)
