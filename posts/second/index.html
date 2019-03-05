@@ -29,17 +29,19 @@
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
       
-      Posts | Khinshan Khan
+      About Flask Blog | Posts | Khinshan Khan
 
     </title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
     
+    <link rel="stylesheet" href="/pygments.css">
+
     <style>
-      a {
-	  color:inherit;
-	  text-decoration: none;
+      pre {
+	  background: #515151;
+	  padding: 5px 10px;
       }
     </style>
 
@@ -62,6 +64,8 @@
       <ul id="dropdown1" class="dropdown-content" style="color: black;">
 
 	
+	<li><a href="/posts/">Posts</a></li>
+	
 
 	
 	<li><a href="/tags/">Tags</a></li>
@@ -77,7 +81,7 @@
 	    <div class="col s12 white-text">
 
 	      <h2 class="teal-text white-text lighten-2 upper">
-		posts
+		About Flask Blog
 	      </h2>
 
 	      <hr style="color:white;">
@@ -139,78 +143,53 @@
         </div>
         <div class="content">
           
+	  <h2>Features:</h2>
+	  <p>Posts are added in <code>markdown</code> format in the <code>pages</code> directory. Posts must have <a href="http://www.yaml.org/">YAML metadata</a>, followed by a blank line and then the page or post body.</p>
+	  <p>Example:</p>
+	  <div class="codehilite"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">My</span> <span class="n">post</span>
+	      <span class="n">date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">12</span>
+	      <span class="n">descr</span><span class="o">:</span> <span class="n">A</span> <span class="k">new</span> <span class="n">awesome</span> <span class="n">post</span> <span class="n">I</span> <span class="n">wrote</span>
+	      <span class="n">tags</span><span class="o">:</span> <span class="o">[</span><span class="n">post</span><span class="o">,</span> <span class="k">new</span><span class="o">,</span> <span class="n">awesome</span><span class="o">]</span>
+	      <span class="n">img</span><span class="o">:</span> <span class="n">cutecat</span><span class="o">.</span><span class="na">jpg</span>
+	      <span class="n">imgalt</span><span class="o">:</span> <span class="n">Photo</span> <span class="n">of</span> <span class="n">my</span> <span class="n">cute</span> <span class="n">cat</span>
+
+	      <span class="err">#</span> <span class="n">Lorem</span> <span class="n">Ipsum</span>
+	  </pre></div>
 
 
-
-
-	  <table class="highlight" id="myTable">
-
-
+	  <p>Metadata tags used:</p>
+	  <table>
+	    <thead>
+	      <tr>
+		<th>tag</th>
+		<th>used for</th>
+	      </tr>
+	    </thead>
 	    <tbody>
-	      
-	      
 	      <tr>
-		<td>
-		  <a href="/posts/second/">
-		    <b>About Flask Blog</b>
-		    <br>
-		    <i>2018-12-13</i>
-		  </a>
-		  <br>
-		  
-		  
-		  <span class="new badge  blue-grey" data-badge-caption="">
-		    <a href="/tag/flask/">flask</a>
-		  </span>
-		  
-		  <span class="new badge  blue-grey" data-badge-caption="">
-		    <a href="/tag/general/">general</a>
-		  </span>
-		  
-		  <span class="new badge  blue-grey" data-badge-caption="">
-		    <a href="/tag/python/">python</a>
-		  </span>
-		  
-		  
-		</td>
+		<td>title</td>
+		<td>post or page title</td>
 	      </tr>
-	      
-	      
 	      <tr>
-		<td>
-		  <a href="/posts/first/">
-		    <b>Numero Uno</b>
-		    <br>
-		    <i>2015-08-27</i>
-		  </a>
-		  <br>
-		  
-		  
-		  <span class="new badge  blue-grey" data-badge-caption="">
-		    <a href="/tag/awesome/">awesome</a>
-		  </span>
-		  
-		  <span class="new badge  blue-grey" data-badge-caption="">
-		    <a href="/tag/general/">general</a>
-		  </span>
-		  
-		  <span class="new badge  blue-grey" data-badge-caption="">
-		    <a href="/tag/stuff/">stuff</a>
-		  </span>
-		  
-		  
-		</td>
+		<td>date</td>
+		<td>publication date - mandatory for posts</td>
 	      </tr>
-	      
+	      <tr>
+		<td>descr</td>
+		<td>page or post description</td>
+	      </tr>
+	      <tr>
+		<td>tags</td>
+		<td>tags for the post</td>
+	      </tr>
+	      <tr>
+		<td>img</td>
+		<td>filename of a picture uploaded in <code>static/pictures</code></td>
+	      </tr>
 	    </tbody>
 	  </table>
-
-	  <div class="col-md-12 center text-center">
-	    <span class="left" id="total_reg"></span>
-	    <ul class="pagination pager" id="myPager"></ul>
-	  </div>
-
-
+	  About Flask Blog
+	  2018-12-13
 
         </div>
       </div>
@@ -268,26 +247,6 @@
 
     <!-- Custom Javascript -->
     
-
-
-    <script type="text/javascript" src="/static/js/pagination.js"></script>
-
-    <script>
-      $(document).ready(function(){
-	  $('#myTable').pageMe({
-	      pagerSelector:'#myPager',
-	      activeColor: 'blue',
-	      prevText:'Anterior',
-	      nextText:'Siguiente',
-	      showPrevNext:true,
-	      hidePageNumbers:false,
-	      perPage:5
-	  });
-      });
-    </script>
-
-
-
-
+    
   </body>
 </html>

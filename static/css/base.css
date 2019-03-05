@@ -12,7 +12,7 @@
 
 body {
     font-family: Lato;
-    background-color: #cfd8dc;
+    background-color: #eceff1;
 }
 
 :focus {
@@ -126,4 +126,17 @@ p {
 
 .dropdown-content li > a{
     color: black;
+}
+
+.upper {
+    display: flex;
+    justify-content: space-around;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.upper a:link, .upper a:visited, .upper a:hover{
+    text-decoration: none;
+    text-decoration: none;
+    color:#FFF;
 }

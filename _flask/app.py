@@ -33,7 +33,6 @@ def index():
 def home():
     this = "home"
     routes = paths[:]
-    routes.remove(this)
     return render_template('home.html', pages=flatpages, this=this, routes=routes)
 
 @app.route(PREFIX+'/about/')
