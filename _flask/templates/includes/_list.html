@@ -1,9 +1,5 @@
 <table class="highlight" id="myTable">
-  <thead>
-    <tr>
-      <th><h4><b>{{title}}</b></h4></th>
-    </tr>
-  </thead>
+
 
   <tbody>
     {% for page in (posts|sort(attribute='date', reverse = True)) %}
