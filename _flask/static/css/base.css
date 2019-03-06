@@ -12,7 +12,8 @@
 
 body {
     font-family: Lato;
-    background-color: #eceff1;
+    background-image:  url('/static/img/works/debut_light.png');
+    background-repeat: repeat;
 }
 
 :focus {
@@ -24,6 +25,7 @@ body {
 }
 
 .container {
+    //background-color: #eceff1;
     width: 80%;
 }
 
