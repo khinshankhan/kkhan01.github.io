@@ -22,7 +22,13 @@ section {
 }
 
 #page1 {
-    background: url(http://sf.co.ua/2012/wallpaper-2053949.jpg);//linear-gradient(to bottom, #5c84ac 0%, #444444 60%, #5c84ac 100%);
+    //linear-gradient(to bottom, #5c84ac 0%, #444444 60%, #5c84ac 100%);
+    background: url(https://orig00.deviantart.net/0ef4/f/2018/163/8/8/_custom_box_background__aesthetic_is_dead_by_king_lulu_deer-dce61tw.gif?rect=247,0,785,785&q=98&fm=jpg&fit=max) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 
 }
 
