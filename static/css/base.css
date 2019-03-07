@@ -145,3 +145,7 @@ p {
     text-decoration: none;
     color: black;
 }
+.parallax-container {
+      height: 600px;
+  }
+
