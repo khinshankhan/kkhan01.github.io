@@ -23,7 +23,7 @@ section {
 
 #page1 {
     //linear-gradient(to bottom, #5c84ac 0%, #444444 60%, #5c84ac 100%);
-    background: url("/static/img/works/tenor.jpg");
+    background: url(https://www.psdgraphics.com/file/magical-sky-background.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -35,10 +35,16 @@ section {
 h1, span, p {
     color: #FFFFFF;
     text-transform: uppercase;
+    text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 }
 
 .thin {
     font-weight: 300;
+
 }
 .thick {
     font-weight: 900;
