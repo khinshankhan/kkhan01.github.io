@@ -154,7 +154,7 @@ p {
 
 .dropdown-content a:link, .dropdown-content a:visited, .dropdown-content a:hover{
     text-decoration: none;
-    color: black;
+    color: #9b4dca;
 }
 
 
@@ -170,12 +170,6 @@ p {
 
 .normthick {
     font-weight: 500;
-
-    text-shadow:
-	-1px -1px 0 #000,
-	1px -1px 0 #000,
-	-1px 1px 0 #000,
-	1px 1px 0 #000;
 }
 
 .thick {
