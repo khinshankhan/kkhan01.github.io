@@ -138,6 +138,12 @@ p {
     justify-content: space-around;
     color: #FFFFFF;
     text-transform: uppercase;
+
+    text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 }
 
 .upper a:link, .upper a:visited, .upper a:hover{
@@ -148,18 +154,36 @@ p {
 
 .dropdown-content a:link, .dropdown-content a:visited, .dropdown-content a:hover{
     text-decoration: none;
-    text-decoration: none;
     color: black;
 }
 
+
 .thin {
     font-weight: 300;
+
+    text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 }
 
 .normthick {
     font-weight: 500;
+
+    text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 }
 
 .thick {
     font-weight: 900;
+
+    text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 }
