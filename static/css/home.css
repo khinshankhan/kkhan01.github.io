@@ -23,7 +23,7 @@ section {
 
 #page1 {
     //linear-gradient(to bottom, #5c84ac 0%, #444444 60%, #5c84ac 100%);
-    background: url("/static/img/works/tenor.jpg");
+    background: url("/static/img/works/tenor.jpg") center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
