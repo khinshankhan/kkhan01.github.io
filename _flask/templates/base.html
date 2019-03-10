@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/k_1.png')}}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/works/k_logo.jpeg')}}"/>
 
     <!-- JQUERY -->
     <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
@@ -86,8 +86,8 @@
       {% if messages %}
       {% for message in messages %}
       M.toast({
-      html: '{{ message }}',
-      displayLength: 4000
+	  html: '{{ message }}',
+	  displayLength: 4000
       });
       {% endfor %}
       {% endif %}
@@ -95,9 +95,9 @@
     </script>
 
     <script>
-  $(document).ready(function(){
+      $(document).ready(function(){
 
-  });
+      });
     </script>
 
     <!-- Custom Javascript -->
