@@ -23,7 +23,7 @@ freezer = Freezer(app)
 
 PREFIX=""
 
-paths=["index", "about", "resume", "blog"]
+paths=["index", "about", "resume", "projects", "blog"]
 
 @app.route(PREFIX+'/')
 def index():
@@ -31,14 +31,12 @@ def index():
 
 @app.route(PREFIX+'/home/')
 def home():
-    this = "home"
-    routes = paths[:]
+    this, routes = sys._getframe().f_code.co_name, paths[:]
     return render_template('home.html', pages=flatpages, this=this, routes=routes)
 
 @app.route(PREFIX+'/about/')
 def about():
-    this = "about"
-    routes = paths[:]
+    this, routes = sys._getframe().f_code.co_name, paths[:]
     routes.remove(this)
     return render_template('about.html', this=this, routes=routes)
 
@@ -48,8 +46,7 @@ def pygments_css():
 
 @app.route(PREFIX+"/posts/")
 def posts():
-    this = "posts"
-    routes = paths[:]
+    this, routes = sys._getframe().f_code.co_name, paths[:]
 
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
     posts.sort(key=lambda item:item['date'], reverse=False)
@@ -64,8 +61,7 @@ def post(name):
 
 @app.route(PREFIX+"/tags/")
 def tags():
-    this = "tags"
-    routes = paths[:]
+    this, routes = sys._getframe().f_code.co_name, paths[:]
 
     tags = []
     for p in flatpages:
@@ -80,6 +76,11 @@ def tag(tag):
     tagged = [p for p in flatpages if tag in p.meta.get('tags', [])]
     return render_template('tag.html', posts=tagged, tags=tagged, tagg=tag, this=tag, routes=paths)
 
+@app.route(PREFIX+'/projects/')
+def projects():
+    this, routes = sys._getframe().f_code.co_name, paths[:]
+    routes.remove(this)
+    return render_template('projects.html', this=this, routes=routes)
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "build":
