@@ -59,6 +59,8 @@
     
     
     <header>
+
+      <!-- Desktop Dropdown -->
       <ul id="dropdown1" class="dropdown-content normthick">
 
 	
@@ -73,86 +75,178 @@
 
       </ul>
 
-      <div class="parallax-container center valign-wrapper">
-	<div class="container">
-	  <div class="row">
-	    <div class="col s12 white-text purpleoutline mylink">
+      <!-- Mobile Dropdown -->
+      <ul id="dropdown2" class="dropdown-content">
 
-	      <h2 class="teal-text white-text lighten-2 upper thick">
-		general
-	      </h2>
+	
+	<li><a class="center" href="/posts/">Posts</a></li>
+	
 
-	      <hr style="color:white;">
-	      <br>
+	
+	<li><a class="center" href="/tags/">Tags</a></li>
+	
 
-	      <div class="upper" style="display: flex;justify-content: space-around;">
-		
+	<li class="divider"></li>
 
-		<div >
+      </ul>
+
+      <!-- Desktop Navbar -->
+      <div class="hide-on-small-only">
+	<div class="parallax-container center valign-wrapper">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col s12 white-text purpleoutline mylink">
+
+		<h2 class="teal-text white-text lighten-2 upper thick">
+		  general
+		</h2>
+
+		<hr style="color:white;">
+		<br>
+
+		<div class="upper" style="display: flex;justify-content: space-around;">
+		  
+
+		  <div>
+
+		    
+		    <a href="/"> Home </a>
+
+		    
+
+		  </div>
 
 		  
-		  <a href="/"> home </a>
+
+		  <div>
+
+		    
+		    <a href="/about/"> about </a>
+		    
+
+		  </div>
 
 		  
+
+		  <div>
+
+		    
+		    <a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a>
+
+		    
+
+		  </div>
+
+		  
+
+		  <div>
+
+		    
+		    <a href="/projects/"> projects </a>
+		    
+
+		  </div>
+
+		  
+
+		  <div>
+
+		    
+		    <a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a>
+
+		    
+
+		  </div>
+
+		  
+
 
 		</div>
-
-		
-
-		<div >
-
-		  
-		  <a href="/about/"> about </a>
-		  
-
-		</div>
-
-		
-
-		<div >
-
-		  
-		  <a href="https://khinshankhan.com/resume/resume.pdf"> resume </a>
-
-		  
-
-		</div>
-
-		
-
-		<div >
-
-		  
-		  <a href="/projects/"> projects </a>
-		  
-
-		</div>
-
-		
-
-		<div >
-
-		  
-		  <a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a>
-
-		  
-
-		</div>
-
-		
-
 
 	      </div>
-
 	    </div>
 	  </div>
-	</div>
 
-	<div class="parallax">
-	  <img class="left" src="/static/img/works/tenor.jpg">
+	  <div class="parallax">
+	    <img class="left" src="/static/img/works/tenor.jpg">
+	  </div>
+
+	</div>
+      </div>
+
+
+      <!-- Mobile Navbar -->
+      <div class="hide-on-med-and-up">
+	<div class="parallax-container">
+
+	  <ul id="nav-mobile" class="sidenav">
+
+	    
+
+	    <div>
+
+	      
+	      <li><a href="/"> Home </a></li>
+
+	      
+
+	    </div>
+
+	    
+
+	    <div>
+
+	      
+	      <li><a style="text-transform: capitalize;" href="/about/"> about </a></li>
+	      
+
+	    </div>
+
+	    
+
+	    <div>
+
+	      
+	      <li><a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a></li>
+
+	      
+
+	    </div>
+
+	    
+
+	    <div>
+
+	      
+	      <li><a style="text-transform: capitalize;" href="/projects/"> projects </a></li>
+	      
+
+	    </div>
+
+	    
+
+	    <div>
+
+	      
+	      <li> <a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
+
+	      
+
+	    </div>
+
+	    
+	  </ul>
+
+	  <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+	  <div class="parallax">
+	    <img class="left" src="/static/img/works/tenor.jpg">
+	  </div>
+
 	</div>
 
       </div>
+
     </header>
     
     
