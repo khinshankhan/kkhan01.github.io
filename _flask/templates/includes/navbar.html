@@ -1,4 +1,6 @@
 <header>
+
+  <!-- Desktop Dropdown -->
   <ul id="dropdown1" class="dropdown-content normthick">
 
     {% if this != "posts" %}
@@ -13,50 +15,108 @@
 
   </ul>
 
-  <div class="parallax-container center valign-wrapper">
-    <div class="container">
-      <div class="row">
-	<div class="col s12 white-text purpleoutline mylink">
+  <!-- Mobile Dropdown -->
+  <ul id="dropdown2" class="dropdown-content">
 
-	  <h2 class="teal-text white-text lighten-2 upper thick">
-	    {{this}}
-	  </h2>
+    {% if this != "posts" %}
+    <li><a class="center" href="{{ url_for('posts') }}">Posts</a></li>
+    {% endif %}
 
-	  <hr style="color:white;">
-	  <br>
+    {% if this != "tags" %}
+    <li><a class="center" href="{{ url_for('tags') }}">Tags</a></li>
+    {% endif %}
 
-	  <div class="upper" style="display: flex;justify-content: space-around;">
-	    {% for route in routes %}
+    <li class="divider"></li>
 
-	    <div >
+  </ul>
 
-	    {% if route == "index" %}
-	    <a href="{{ url_for(route) }}"> home </a>
+  <!-- Desktop Navbar -->
+  <div class="hide-on-small-only">
+    <div class="parallax-container center valign-wrapper">
+      <div class="container">
+	<div class="row">
+	  <div class="col s12 white-text purpleoutline mylink">
 
-	    {% elif route == "resume" %}
-	    <a href="https://khinshankhan.com/resume/resume.pdf"> resume </a>
+	    <h2 class="teal-text white-text lighten-2 upper thick">
+	      {{this}}
+	    </h2>
 
-	    {% elif route == "blog" %}
-	    <a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a>
+	    <hr style="color:white;">
+	    <br>
 
-	    {% else %}
-	    <a href="{{ url_for(route) }}"> {{route}} </a>
-	    {% endif %}
+	    <div class="upper" style="display: flex;justify-content: space-around;">
+	      {% for route in routes %}
+
+	      <div>
+
+		{% if route == "index" %}
+		<a href="{{ url_for(route) }}"> Home </a>
+
+		{% elif route == "resume" %}
+		<a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a>
+
+		{% elif route == "blog" %}
+		<a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a>
+
+		{% else %}
+		<a href="{{ url_for(route) }}"> {{route}} </a>
+		{% endif %}
+
+	      </div>
+
+	      {% endfor %}
+
 
 	    </div>
 
-	    {% endfor %}
-
-
 	  </div>
-
 	</div>
       </div>
-    </div>
 
-    <div class="parallax">
-      <img class="left" src="/static/img/works/tenor.jpg">
+      <div class="parallax">
+	<img class="left" src="/static/img/works/tenor.jpg">
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Mobile Navbar -->
+  <div class="hide-on-med-and-up">
+    <div class="parallax-container">
+
+      <ul id="nav-mobile" class="sidenav">
+
+	{% for route in routes %}
+
+	<div>
+
+	  {% if route == "index" %}
+	  <li><a href="{{ url_for(route) }}"> Home </a></li>
+
+	  {% elif route == "resume" %}
+	  <li><a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a></li>
+
+	  {% elif route == "blog" %}
+	  <li> <a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
+
+	  {% else %}
+	  <li><a style="text-transform: capitalize;" href="{{ url_for(route) }}"> {{route}} </a></li>
+	  {% endif %}
+
+	</div>
+
+	{% endfor %}
+      </ul>
+
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <div class="parallax">
+	<img class="left" src="/static/img/works/tenor.jpg">
+      </div>
+
     </div>
 
   </div>
+
 </header>
