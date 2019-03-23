@@ -1,3 +1,4 @@
+
 <table class="highlight" id="myTable">
 
 
@@ -7,11 +8,11 @@
     <tr>
       <td>
         <a href="{{ url_for("post", name=path) }}">
-          <b style="color:#9b4dca;">{{page.title}}</b>
-          <br>
-          <i>{{page.date}}</i>
+          <h6 style="display: inline-block;color:#9b4dca;">{{page.title}} </h6>
+	  |
+          <i>{{page.date.strftime('%b. %d, %Y')}}</i>
         </a>
-	<br>
+	<br style="line-height: 50px;">
 	{% if page.meta.tags|length %}
         {% for page_tag in page.meta.tags |sort() %}
 	<span class="new badge  blue-grey" data-badge-caption="">
