@@ -14,76 +14,83 @@
 
 
     <link rel="stylesheet" type="text/css" href="/static/css/home.css"/>
-</style>
-</head>
 
-<body>
+    <style>
+      .material-tooltip {
+	  background-color: #9b4dca;
+	  font-family: "Roboto Mono";
+      }
+    </style>
+
+  </head>
+
+  <body>
 
 
-  <section id="page1">
+    <section id="page1">
 
 
 
-    <div class="valign-wrapper" style="width:100%;height:100%;position: absolute;">
-      <div class="valign" style="width:100%;">
-        <div class="container">
+      <div class="valign-wrapper" style="width:100%;height:100%;position: absolute;">
+	<div class="valign" style="width:100%;">
+          <div class="container">
 
-	  <div class="row">
+	    <div class="row">
 
-	    <div class="row center">
-	      <div class="col s12">
-		<h1 class=""><span class="thin">Khinshan</span><span class="thick">Khan</span></h1>
-	      </div>
-	      <div class="col s12 m6 offset-m3">
-		<div class="col s8 push-s2">
-		  <div class="divider"></div>
-		</div>
-	      </div>
 	      <div class="row center">
-		<h2 class="header col s12 light">
-		  <span>
-		    <div class="col s3">
-		      <a class="white-text text-lighten-3" href="/about/">
-			<i class="fas fa-id-badge tooltipped" data-position="top" data-tooltip="About"></i>
-		      </a>
-		    </div>
-		    <div class="col s3">
-		      <a class="white-text text-lighten-3" href="https://khinshankhan.com/resume/resume.pdf">
-			<i class="far fa-file tooltipped" data-position="top" data-tooltip="Resume"></i>
-		      </a>
-		    </div>
-		    <div class="col m3">
-		      <a class="white-text text-lighten-3" href="/projects/">
-			<i class="fab fa-hubspot tooltipped" data-position="top" data-tooltip="Projects"></i>
-		      </a>
-		    </div>
-		    <div class="col m3">
-		      <a class="white-text text-lighten-3" href="/posts/">
-			<i class="fas fa-user-astronaut tooltipped" data-position="top" data-tooltip="Blog"></i>
-		      </a>
-		    </div>
-		  </span>
-		</h2>
+		<div class="col s12">
+		  <h1 class=""><span class="thin">Khinshan</span><span class="thick">Khan</span></h1>
+		</div>
+		<div class="col s12 m6 offset-m3">
+		  <div class="col s8 push-s2">
+		    <div class="divider"></div>
+		  </div>
+		</div>
+		<div class="row center">
+		  <h2 class="header col s12 light">
+		    <span>
+		      <div class="col s3">
+			<a class="white-text text-lighten-3" href="/about/">
+			  <i class="fas fa-id-badge tooltipped" data-position="bottom" data-tooltip="About"></i>
+			</a>
+		      </div>
+		      <div class="col s3">
+			<a class="white-text text-lighten-3" href="https://khinshankhan.com/resume/resume.pdf">
+			  <i class="far fa-file tooltipped" data-position="bottom" data-tooltip="Resume"></i>
+			</a>
+		      </div>
+		      <div class="col m3">
+			<a class="white-text text-lighten-3" href="/projects/">
+			  <i class="fab fa-hubspot tooltipped" data-position="bottom" data-tooltip="Projects"></i>
+			</a>
+		      </div>
+		      <div class="col m3">
+			<a class="white-text text-lighten-3" href="/posts/">
+			  <i class="fas fa-user-astronaut tooltipped" data-position="bottom" data-tooltip="Blog"></i>
+			</a>
+		      </div>
+		    </span>
+		  </h2>
+		</div>
+
 	      </div>
-
 	    </div>
-	  </div>
 
-        </div>
+          </div>
+	</div>
       </div>
-    </div>
 
 
-  </section>
+    </section>
 
-  <!-- Materialize JS for optimized loading -->
-  <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+    <!-- Materialize JS for optimized loading -->
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
 
-  <script>
-    $(document).ready(function(){
-	$('.tooltipped').tooltip();
-    });
-  </script>
+    <script>
+      $(document).ready(function(){
+	  $('.tooltipped').tooltip();
+      });
+    </script>
 
-</body>
+  </body>
 </html>
