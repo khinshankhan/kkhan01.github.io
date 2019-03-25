@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block c_title %}
+{{tagg}} | Tag
+{% endblock %}
+
 {% block style %}
 <style>
   a {
@@ -7,10 +11,6 @@
   text-decoration: none;
   }
 </style>
-{% endblock %}
-
-{% block c_title %}
-{{tagg}} | Tag | Khinshan Khan
 {% endblock %}
 
 {% block content %}
