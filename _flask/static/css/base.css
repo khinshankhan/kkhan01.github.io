@@ -62,6 +62,14 @@ body {
     color: #9b4dca !important;
 }
 
+.purpleoutline{
+    text-shadow:
+	-1px -1px 0 #9b4dca,
+	1px -1px 0 #9b4dca,
+	-1px 1px 0 #9b4dca,
+	1px 1px 0 #9b4dca;
+}
+
 footer.page-footer {
     margin: 0;
     padding: 0;
@@ -90,14 +98,6 @@ footer {
 
 .fab:hover{
     background-color: #333;
-}
-
-.purpleoutline{
-    text-shadow:
-	-1px -1px 0 #9b4dca,
-	1px -1px 0 #9b4dca,
-	-1px 1px 0 #9b4dca,
-	1px 1px 0 #9b4dca;
 }
 
 .normalthick {
