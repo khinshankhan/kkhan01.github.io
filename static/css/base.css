@@ -69,10 +69,10 @@ footer.page-footer {
 }
 
 footer {
-    background-repeat: repeat;
     background-color: #eceff1;
-    background:  url('/static/img/works/tenor.jpg') center bottom;
-    background-position: center bottom;
+    background:  url('/static/img/works/mini-tenor.jpg');
+    background-repeat: repeat-x;
+    background-position: top;
 }
 
 .social [class*="fab fa-"] {
