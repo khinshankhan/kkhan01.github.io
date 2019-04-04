@@ -108,3 +108,13 @@ footer {
 .thick {
     font-weight: 900;
 }
+
+ul:not(.browser-default) {
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+ul:not(.browser-default) li {
+    list-style-type: disc;
+}
