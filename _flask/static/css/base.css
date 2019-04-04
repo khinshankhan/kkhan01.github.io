@@ -109,12 +109,14 @@ footer {
     font-weight: 900;
 }
 
-ul:not(.browser-default) {
+.browser-default-uls ul {
     padding-left: 30px;
     margin-top: 10px;
     margin-bottom: 15px;
 }
-
-ul:not(.browser-default) li {
-    list-style-type: disc;
+.browser-default-uls ul li {
+    list-style-type: disc !important;
+}
+.browser-default-uls ul li ul li {
+    list-style-type: disc !important;
 }
