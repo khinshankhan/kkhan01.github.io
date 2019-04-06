@@ -1,0 +1,47 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:nil broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:nil e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:nil title:nil toc:nil todo:t |:t
+#+TITLE:
+#+DATE: <2019-04-06 Sat>
+#+AUTHOR: Khinshan Khan
+#+EMAIL: khinshan.khan@gmail.com
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 26.1 (Org mode 9.1.9)
+
+#title: About Flask Blog
+#date: 2018-12-13
+#descr: hmmm1
+#tags: [flask, python, general]
+
+* Features
+Posts are added in =markdown= format in the `pages` directory.
+Posts must have [YAML metadata](http://www.yaml.org/), followed
+by a blank line and then the page or post body.
+
+Example:
+
+#+BEGIN_SRC
+title: My post
+date: 2018-12-12
+descr: A new awesome post I wrote
+tags: [post, new, awesome]
+img: cutecat.jpg
+imgalt: Photo of my cute cat
+
+# Lorem Ipsum
+#+END_SRC
+
+Metadata tags used:
+
+| tag   | used for                                              |
+|-------+-------------------------------------------------------|
+| title | post or page title                                    |
+| date  | publication date                                      |
+| descr | page or post description                              |
+| tags  | tags for the post                                     |
+| img   | filename of the picture uploaded in =static/pictures= |
+|-------+-------------------------------------------------------|

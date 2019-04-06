@@ -1,11 +1,12 @@
-title: About Flask Blog
-date: 2018-12-13
-descr: hmmm1
+title: About Flask Blog 
+date: 2018-12-13 
+descr: hmmm1 
 tags: [flask, python, general]
 
-## Features:
 
-Posts are added in `markdown` format in the `pages` directory. Posts must have [YAML metadata](http://www.yaml.org/), followed by a blank line and then the page or post body.
+# Features
+
+Posts are added in \`markdown\` format in the \`pages\` directory. Posts must have [YAML metadata](<http://www.yaml.org/>), followed by a blank line and then the page or post body.
 
 Example:
 
@@ -22,10 +23,10 @@ imgalt: Photo of my cute cat
 
 Metadata tags used:
 
-  tag   | used for
---------|--------------------------------------------------------------
- title  | post or page title
- date   | publication date - mandatory for posts
- descr  | page or post description
- tags   | tags for the post
- img    | filename of a picture uploaded in `static/pictures`
+| tag   | used for                                              |
+|----- |----------------------------------------------------- |
+| title | post or page title                                    |
+| date  | publication date                                      |
+| descr | page or post description                              |
+| tags  | tags for the post                                     |
+| img   | filename of the picture uploaded in `static/pictures` |
