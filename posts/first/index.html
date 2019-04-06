@@ -271,12 +271,14 @@
         <div class="content">
           
 	  <div class="browser-default-uls">
-	    <p>American-style dates, I know, I know. Here you can write markdown code, including <em>italics</em>. Heck others don't work</p>
+	    <p>American-style dates, I know, I know. Here you can write markdown code, including <em>italics</em>, ‘+strike-through+’, <strong>bold</strong>. Heck others don't work?</p>
 	    <p>You can have:</p>
 	    <ul>
-	      <li>Lists</li>
-	      <li>test 2<ul>
-		  <li>test 3</li>
+	      <li>Lists<ul>
+		  <li>test 2<ul>
+		      <li>test 3</li>
+		    </ul>
+		  </li>
 		</ul>
 	      </li>
 	      <li>More Lists<ul>
@@ -288,10 +290,7 @@
 	    <blockquote>
 	      <p>And block quotes</p>
 	    </blockquote>
-	    <div class="codehilite"><pre><span></span>And event highlighted code if you indent :)
-	    </pre></div>
-
-
+	    <p>And event highlighted code if you indent :)</p>
 	    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
 		<span class="k">return</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span>
 
