@@ -7,7 +7,7 @@ rm -rf !(.|..|.git|.gitignore|_flask|README.md|CNAME)
 cd _flask
 emacs --script org2md.el content/posts
 python3 app.py build
-emacs --script autoindent.el build
+#emacs --script autoindent.el build
 mv build/* ..
 rm -rf build
 rm -rf content/posts/*md* content/posts/*~
