@@ -120,3 +120,7 @@ footer {
 .browser-default-uls ul li ul li {
     list-style-type: disc !important;
 }
+
+pre > * {
+    font-family: monospace, monospace !important;
+}
