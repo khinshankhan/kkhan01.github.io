@@ -82,6 +82,10 @@ def projects():
     routes.remove(this)
     return render_template('projects.html', this=this, routes=routes)
 
+@app.route(PREFIX+'/404.html')
+def page_not_found():
+    return render_template("404.html")
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "build":
         freezer.freeze()
