@@ -158,6 +158,59 @@ Page Not Found
 <div class="container">
   <div class="content">
     <h1 class="text-center">Page Not Found</h1>
+
+    <h4>Enjoy an xkcd image</h4>
+
+    <img src="" alt="404 error" id="404img">
+
+    <script>
+      let totalNum = 1969;
+      let nameXKCD = "not_available";
+
+      let safety = function(){
+	  if(isNaN(totalNum) || totalNum == 1969 || !nameXKCD.match(/[a-z]/i)){
+	      totalNum = 1969;
+	      nameXKCD = "not_available";
+	  }
+
+	  nameXKCD = nameXKCD.toLowerCase().replace(/ /g,"_"); // make string lowercase and replace spaces with underscores
+      }
+
+      let randXKCDImage = async function(){
+	  let getXKCDInfo = async function (url, item, semaphore) {
+	      let xhr = new XMLHttpRequest();
+	      xhr.onreadystatechange = function() {
+		  if (this.readyState === 4 && this.status === 200) {
+		      let response = JSON.parse(this.responseText);
+		      if(semaphore == 0){
+			  totalNum = response[item];
+		      } else {
+			  nameXKCD = response[item];
+		      }
+		      safety();
+		      document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${nameXKCD}.png` // set 404img to chosen XKCD comic
+		      console.log("THIS: " + response[item]);
+		  }
+	      }
+	      xhr.open("GET", "https://cors-anywhere.herokuapp.com/" + url);
+	      xhr.setRequestHeader("Accept", 'application/json');
+	      xhr.send();
+	  }
+
+	  getXKCDInfo("https://xkcd.com/info.0.json", "num", 0);
+	  totalNum = Math.floor(Math.random() * totalNum);
+	  safety();
+	  getXKCDInfo("https://xkcd.com/" +  totalNum + "/info.0.json", "safe_title", 1);
+	  safety();
+      }
+
+      randXKCDImage(); // attempt to get randomized data for XKCD
+      safety(); // ensures nameXKCD is valid
+      document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${nameXKCD}.png` // set 404img to chosen XKCD comic
+
+    </script>
+    <br>
+
     <p class="text-center"><a href="/">Return to index</a></p>
   </div>
 </div>
