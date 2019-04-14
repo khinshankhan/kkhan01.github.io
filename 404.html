@@ -266,18 +266,30 @@ Page Not Found
     <h1 class="text-center">Page Not Found</h1>
 
     <h4>Enjoy an xkcd image</h4>
+    <h6 id="thonk">Bypassing CORS and gaining XKCD access...</h6>
 
     <img src="" alt="404 error" class="responsive-img materialboxed" id="404img">
 
     <script>
-      let totalNum = 1969;
-      let nameXKCD = "not_available";
-      let muh_link = `https://imgs.xkcd.com/comics/${nameXKCD}.png`;
+      let totalNum = 1999; // for the sake that we somehow get a bad number
+      images = [
+	  'not_available',
+	  'real_programmers',
+	  'compiling',
+	  'the_sea',
+	  'exploits of a mom',
+	  'pointers',
+	  'tech_support_cheat_sheet',
+	  'daniel knuth',
+	  'floor_tiles'
+      ];
+      let nameXKCD = images[Math.floor(Math.random() * images.length)]; // choose a valid image from array already known to be PNGs
+      let muh_link = `https://imgs.xkcd.com/comics/${nameXKCD}.png`; // set temp link
 
       let safety = function(){
-	  if(isNaN(totalNum) || totalNum == 1969 || !nameXKCD.match(/[a-z]/i)){
-	      totalNum = 1969;
-	      nameXKCD = "not_available";
+	  if(isNaN(totalNum) || totalNum == 1999 || !nameXKCD.match(/[a-z]/i)){ // ensure successful operation
+	      totalNum = 1999;
+	      nameXKCD = images[Math.floor(Math.random() * images.length)]; // rechoose random?
 	  }
 
 	  nameXKCD = nameXKCD.toLowerCase().replace(/ /g,"_"); // make string lowercase and replace spaces with underscores
@@ -292,15 +304,16 @@ Page Not Found
 		      if(semaphore == 0){
 			  totalNum = response[item];
 		      } else {
-			  muh_link = response["img"]
+			  muh_link = response[item]
 		      }
 
 		      safety();
 		      document.getElementById("404img").src=`${muh_link}` // set 404img to chosen XKCD comic
+		      document.getElementById("thonk").remove() // get rid off message once async done
 		      console.log(semaphore + ": " + response[item]);
 		  }
 	      }
-	      xhr.open("GET", "https://cors-anywhere.herokuapp.com/" + url);
+	      xhr.open("GET", "https://cors-anywhere.herokuapp.com/" + url); // bypass CORS
 	      xhr.setRequestHeader("Accept", 'application/json');
 	      xhr.send();
 	  }
@@ -308,7 +321,7 @@ Page Not Found
 	  getXKCDInfo("https://xkcd.com/info.0.json", "num", 0);
 	  totalNum = Math.floor(Math.random() * totalNum);
 	  safety();
-	  getXKCDInfo("https://xkcd.com/" +  totalNum + "/info.0.json", "safe_title", 1);
+	  getXKCDInfo("https://xkcd.com/" +  totalNum + "/info.0.json", "img", 1);
 	  safety();
       }
 
