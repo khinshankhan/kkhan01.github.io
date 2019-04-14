@@ -28,12 +28,18 @@ Page Not Found
       let totalNum = 1969;
       let nameXKCD = "not_available";
 
-      let getTotalXKCD = async function (url, item) {
+      let getXKCDInfo = async function (url, item, semaphore) {
 	  let xhr = new XMLHttpRequest();
 	  xhr.onreadystatechange = function() {
 	      if (this.readyState === 4 && this.status === 200) {
 		  let response = JSON.parse(this.responseText);
-		  totalNum = response[item];
+
+		  if(semaphore == 0){
+		      totalNum = response[item];
+		  } else {
+		      nameXKCD = response[item];
+		  }
+
 		  console.log("THIS: " + response[item]);
 	      }
 	  }
@@ -43,19 +49,23 @@ Page Not Found
       }
 
       function randXKCDImage () {
-	  getTotalXKCD("https://xkcd.com/info.0.json", "num");
-	  console.log(totalNum);
-	  images = [
-	      'not_available',
-	  ];
-	  console.log("HEO: " + totalNum);
-	  getTotalXKCD("https://xkcd.com/info.0.json", "num");
-	  console.log("HEO: " + totalNum);
+	  getXKCDInfo("https://xkcd.com/info.0.json", "num", 0);
+	  console.log("HEY: " + totalNum);
+
+	  if(isNaN(totalNum) || totalNum == 1969){
+	      nameXKCD = "not_available";
+	      console.log("NAY" + totalNum);
+	  } else {
+	      totalNum *= Math.floor(Math.random());
+	      console.log("YAY" + totalNum);
+	      getXKCDInfo("https://xkcd.com/" +  totalNum + "/info.0.json", "safe_title", 1);
+	  }
 
 	  return nameXKCD;
       }
 
-      document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${randXKCDImage()}.png`
+      nameXKCD = nameXKCD.toLowerCase().replace(/ /g,"_"); // make string lowercase and replace spaces with underscores
+      document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${nameXKCD}.png` // set 404img to chosen XKCD comic
 
     </script>
     <br>
