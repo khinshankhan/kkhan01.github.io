@@ -28,43 +28,45 @@ Page Not Found
       let totalNum = 1969;
       let nameXKCD = "not_available";
 
-      let getXKCDInfo = async function (url, item, semaphore) {
-	  let xhr = new XMLHttpRequest();
-	  xhr.onreadystatechange = function() {
-	      if (this.readyState === 4 && this.status === 200) {
-		  let response = JSON.parse(this.responseText);
-
-		  if(semaphore == 0){
-		      totalNum = response[item];
-		  } else {
-		      nameXKCD = response[item];
-		  }
-
-		  console.log("THIS: " + response[item]);
-	      }
-	  }
-	  xhr.open("GET", "https://cors-anywhere.herokuapp.com/" + url);
-	  xhr.setRequestHeader("Accept", 'application/json');
-	  xhr.send();
-      }
-
-      function randXKCDImage () {
-	  getXKCDInfo("https://xkcd.com/info.0.json", "num", 0);
-	  console.log("HEY: " + totalNum);
-
-	  if(isNaN(totalNum) || totalNum == 1969){
+      let safety = function(){
+	  if(isNaN(totalNum) || totalNum == 1969 || !nameXKCD.match(/[a-z]/i)){
+	      totalNum = 1969;
 	      nameXKCD = "not_available";
-	      console.log("NAY" + totalNum);
-	  } else {
-	      totalNum *= Math.floor(Math.random());
-	      console.log("YAY" + totalNum);
-	      getXKCDInfo("https://xkcd.com/" +  totalNum + "/info.0.json", "safe_title", 1);
 	  }
 
-	  return nameXKCD;
+	  nameXKCD = nameXKCD.toLowerCase().replace(/ /g,"_"); // make string lowercase and replace spaces with underscores
       }
 
-      nameXKCD = nameXKCD.toLowerCase().replace(/ /g,"_"); // make string lowercase and replace spaces with underscores
+      let randXKCDImage = async function(){
+	  let getXKCDInfo = async function (url, item, semaphore) {
+	      let xhr = new XMLHttpRequest();
+	      xhr.onreadystatechange = function() {
+		  if (this.readyState === 4 && this.status === 200) {
+		      let response = JSON.parse(this.responseText);
+		      if(semaphore == 0){
+			  totalNum = response[item];
+		      } else {
+			  nameXKCD = response[item];
+		      }
+		      safety();
+		      document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${nameXKCD}.png` // set 404img to chosen XKCD comic
+		      console.log("THIS: " + response[item]);
+		  }
+	      }
+	      xhr.open("GET", "https://cors-anywhere.herokuapp.com/" + url);
+	      xhr.setRequestHeader("Accept", 'application/json');
+	      xhr.send();
+	  }
+
+	  getXKCDInfo("https://xkcd.com/info.0.json", "num", 0);
+	  totalNum = Math.floor(Math.random() * totalNum);
+	  safety();
+	  getXKCDInfo("https://xkcd.com/" +  totalNum + "/info.0.json", "safe_title", 1);
+	  safety();
+      }
+
+      randXKCDImage(); // attempt to get randomized data for XKCD
+      safety(); // ensures nameXKCD is valid
       document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${nameXKCD}.png` // set 404img to chosen XKCD comic
 
     </script>
