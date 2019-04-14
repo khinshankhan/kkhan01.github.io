@@ -267,11 +267,12 @@ Page Not Found
 
     <h4>Enjoy an xkcd image</h4>
 
-    <img src="" alt="404 error" id="404img">
+    <img src="" alt="404 error" class="responsive-img materialboxed" id="404img">
 
     <script>
       let totalNum = 1969;
       let nameXKCD = "not_available";
+      let muh_link = `https://imgs.xkcd.com/comics/${nameXKCD}.png`;
 
       let safety = function(){
 	  if(isNaN(totalNum) || totalNum == 1969 || !nameXKCD.match(/[a-z]/i)){
@@ -291,11 +292,12 @@ Page Not Found
 		      if(semaphore == 0){
 			  totalNum = response[item];
 		      } else {
-			  nameXKCD = response[item];
+			  muh_link = response["img"]
 		      }
+
 		      safety();
-		      document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${nameXKCD}.png` // set 404img to chosen XKCD comic
-		      console.log("THIS: " + response[item]);
+		      document.getElementById("404img").src=`${muh_link}` // set 404img to chosen XKCD comic
+		      console.log(semaphore + ": " + response[item]);
 		  }
 	      }
 	      xhr.open("GET", "https://cors-anywhere.herokuapp.com/" + url);
@@ -313,6 +315,10 @@ Page Not Found
       randXKCDImage(); // attempt to get randomized data for XKCD
       safety(); // ensures nameXKCD is valid
       document.getElementById("404img").src=`https://imgs.xkcd.com/comics/${nameXKCD}.png` // set 404img to chosen XKCD comic
+
+      $(document).ready(function(){
+	  $('.materialboxed').materialbox();
+      });
 
     </script>
     <br>
