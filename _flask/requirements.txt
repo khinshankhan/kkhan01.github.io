@@ -6,6 +6,5 @@ itsdangerous==0.24
 Jinja2>=2.10.1
 Markdown==2.6.11
 MarkupSafe==1.0
-pkg-resources==0.0.0
 PyYAML==4.2b1
 Werkzeug==0.14.1
