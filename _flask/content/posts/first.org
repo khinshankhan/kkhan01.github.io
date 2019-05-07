@@ -26,7 +26,13 @@ To start with, posts will usually have the followiing meta data: title, date, de
 Tags are probably the most important and possibly most convoluted mechanism in this site for the users. To start with, every post will have at least one tag (I set up the python "backend" to yell at me if I ever forget). These tags will attempt to be descriptive of the post. But in addition, I'm going idea that tags will show the "status of the post". That is to say, a tag like "discussion" will mean the post has a comment section includes (once I implement comments, you'll see that on almost every post). Here's a mini outline of what I'm going for:
 
 ** Key Tag System
-"volatile", means that the post is subject to editing (well, all posts are, but this tag means the content can change. Others would change for small typos or errors... unless I misunderstand and convey incorrect information, in which case I'll make it apparent using strikethroughs or something.)
+- "volatile": means that the post is subject to editing (well, all posts are, but this tag means the content can change. Others would change for small typos or errors... unless I misunderstand and convey incorrect information, in which case I'll make it apparent using strikethroughs or something.)
+- "discussion": some sort of comment interface is active for the post
+- "discretion": I wouldn't recommend reading this in front of a younger audience (these may pop up in literature that I choose to discuss).
+- "thoughts": my 2 cents about a topic, probably opinionated, so no need to yell at me.
+- "analysis": a logical breakdown and discussion of implications for certain topics (usually technology).
+- "lesson": a post designed to teach rather than discuss.
+- "notes": the post is either derived from my classnotes or personal life.
 
 * About this Site
 Now some of you may be wondering how in the world this site works, the source code for this is available on [[https://github.com/kkhan01/kkhan01.github.io][here on github]]. Currently, I'm statically generating this site and hosting it entirely using github pages (makes you really appreciate this [[https://khinshankhan.com/404][unique 404]]). If I ever shift to a dynamic site or use netlify or something, fret not for the code will continue to be available here.
