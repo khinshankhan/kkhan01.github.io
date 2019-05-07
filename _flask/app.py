@@ -85,7 +85,7 @@ def projects():
 @app.route(PREFIX+'/404.html')
 def page_not_found():
     this, routes = sys._getframe().f_code.co_name, paths[:]
-    return render_template("404.html", this=this, routes=routes)
+    return render_template("404.html", this=this.replace("_", " "), routes=routes)
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "build":
