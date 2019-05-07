@@ -29,7 +29,7 @@
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
       
-About Flask Blog | Posts
+volatile | Tag
  | Khinshan Khan
     </title>
 
@@ -37,12 +37,10 @@ About Flask Blog | Posts
     <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/milligram.css"/>
     
-<link rel="stylesheet" href="/pygments.css">
-
 <style>
-  pre {
-      background: #515151;
-      padding: 5px 10px;
+  a {
+  color:inherit;
+  text-decoration: none;
   }
 </style>
 
@@ -97,7 +95,7 @@ About Flask Blog | Posts
 	  <div class="col s12 white-text purpleoutline mylink">
 
 	    <h2 class="teal-text white-text lighten-2 upper thick">
-	      About Flask Blog
+	      volatile
 	    </h2>
 
 	    <hr style="color:white;">
@@ -242,7 +240,7 @@ About Flask Blog | Posts
 	<br><br><br><br>
 	<div class="col s12 white-text purpleoutline mylink">
 	  <h2 class="center teal-text white-text lighten-2 upper thick">
-	    About Flask Blog
+	    volatile
 	  </h2>
 	  <br>
 	</div>
@@ -270,55 +268,48 @@ About Flask Blog | Posts
         </div>
         <div class="content">
           
-<div class="browser-default-uls">
-<h1>Features</h1>
-<p>Posts are added in <code>markdown</code> format in the `pages` directory. Posts must have <a href="http://www.yaml.org/">YAML metadata</a>, followed by a blank line and then the page or post body.</p>
-<p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">My</span> <span class="n">post</span>
-<span class="n">date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">12</span>
-<span class="n">descr</span><span class="o">:</span> <span class="n">A</span> <span class="k">new</span> <span class="n">awesome</span> <span class="n">post</span> <span class="n">I</span> <span class="n">wrote</span>
-<span class="n">tags</span><span class="o">:</span> <span class="o">[</span><span class="n">post</span><span class="o">,</span> <span class="k">new</span><span class="o">,</span> <span class="n">awesome</span><span class="o">]</span>
-<span class="n">img</span><span class="o">:</span> <span class="n">cutecat</span><span class="o">.</span><span class="na">jpg</span>
-<span class="n">imgalt</span><span class="o">:</span> <span class="n">Photo</span> <span class="n">of</span> <span class="n">my</span> <span class="n">cute</span> <span class="n">cat</span>
-
-<span class="err">#</span> <span class="n">Lorem</span> <span class="n">Ipsum</span>
-</pre></div>
 
 
-<p>Metadata tags used:</p>
-<table>
-<thead>
-<tr>
-<th>tag</th>
-<th>used for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>title</td>
-<td>post or page title</td>
-</tr>
-<tr>
-<td>date</td>
-<td>publication date</td>
-</tr>
-<tr>
-<td>descr</td>
-<td>page or post description</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>tags for the post</td>
-</tr>
-<tr>
-<td>img</td>
-<td>filename of the picture uploaded in <code>static/pictures</code></td>
-</tr>
-</tbody>
+
+
+
+<table class="highlight" id="myTable">
+
+
+  <tbody>
+    
+    
+    <tr>
+      <td>
+        <a href="/posts/first/">
+          <h6 style="display: inline-block;color:#9b4dca;">First Post! </h6>
+	  |
+          <i>May. 01, 2019</i>
+        </a>
+	<br style="line-height: 50px;">
+	
+        
+	<span class="new badge  blue-grey" data-badge-caption="">
+          <a href="/tag/intro/">intro</a>
+	</span>
+        
+	<span class="new badge  blue-grey" data-badge-caption="">
+          <a href="/tag/volatile/">volatile</a>
+	</span>
+        
+	
+      </td>
+    </tr>
+    
+  </tbody>
 </table>
-About Flask Blog
-2018-12-13
+
+<div class="col-md-12 center text-center">
+  <span class="left" id="total_reg"></span>
+  <ul class="pagination pager" id="myPager"></ul>
 </div>
+
+
 
         </div>
       </div>
@@ -376,6 +367,26 @@ About Flask Blog
 
     <!-- Custom Javascript -->
     
-    
+
+
+<script type="text/javascript" src="/static/js/pagination.js"></script>
+
+<script>
+  $(document).ready(function(){
+  $('#myTable').pageMe({
+  pagerSelector:'#myPager',
+  activeColor: 'blue',
+  prevText:'Anterior',
+  nextText:'Siguiente',
+  showPrevNext:true,
+  hidePageNumbers:false,
+  perPage:5
+  });
+  });
+</script>
+
+
+
+
   </body>
 </html>

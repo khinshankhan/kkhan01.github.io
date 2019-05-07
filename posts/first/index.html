@@ -29,7 +29,7 @@
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
       
-Numero Uno | Posts
+First Post! | Posts
  | Khinshan Khan
     </title>
 
@@ -97,7 +97,7 @@ Numero Uno | Posts
 	  <div class="col s12 white-text purpleoutline mylink">
 
 	    <h2 class="teal-text white-text lighten-2 upper thick">
-	      Numero Uno
+	      First Post!
 	    </h2>
 
 	    <hr style="color:white;">
@@ -242,7 +242,7 @@ Numero Uno | Posts
 	<br><br><br><br>
 	<div class="col s12 white-text purpleoutline mylink">
 	  <h2 class="center teal-text white-text lighten-2 upper thick">
-	    Numero Uno
+	    First Post!
 	  </h2>
 	  <br>
 	</div>
@@ -271,36 +271,27 @@ Numero Uno | Posts
         <div class="content">
           
 <div class="browser-default-uls">
-<p>American-style dates, I know, I know. Here you can write markdown code, including <em>italics</em>, ‘+strike-through+’, <strong>bold</strong>. Heck others don't work?</p>
-<p>You can have:</p>
+<h1>Mini Prelude</h1>
+<p>Well I guess to start with, it may be important to note that this post was actually backdated a little. This backdating doesn't have malicious intents like <a href="https://www.lumendatabase.org/blog_entries/800">some companies do</a>, it's meant to keep this post in the beginning as it outlines how my website will work.</p>
+<h1>Details</h1>
+<p>To start with, posts will usually have the followiing meta data: title, date, descr, and tags. The rest of the meta isn't particularly relevant, but available regardless. Title and date should be rater self-explanatory. Currently description is rather useless. Ergo, let's zero in on the most important meta data: tags. Next paragraph to isolate this information for the readers!</p>
+<p>Tags are probably the most important and possibly most convoluted mechanism in this site for the users. To start with, every post will have at least one tag (I set up the python "backend" to yell at me if I ever forget). These tags will attempt to be descriptive of the post. But in addition, I'm going idea that tags will show the "status of the post". That is to say, a tag like "discussion" will mean the post has a comment section includes (once I implement comments, you'll see that on almost every post). Here's a mini outline of what I'm going for:</p>
+<h2>Key Tag System</h2>
+<p>"volatile", means that the post is subject to editing (well, all posts are, but this tag means the content can change. Others would change for small typos or errors&#x2026; unless I misunderstand and convey incorrect information, in which case I'll make it apparent using strikethroughs or something.)</p>
+<h1>About this Site</h1>
+<p>Now some of you may be wondering how in the world this site works, the source code for this is available on <a href="https://github.com/kkhan01/kkhan01.github.io">here on github</a>. Currently, I'm statically generating this site and hosting it entirely using github pages (makes you really appreciate this <a href="https://khinshankhan.com/404">unique 404</a>). If I ever shift to a dynamic site or use netlify or something, fret not for the code will continue to be available here.</p>
+<p>Currently, I'm using <a href="https://pythonhosted.org/Frozen-Flask/">Frozen-Flask</a> to convert a flask app into static content. Along with a bunch of scripts as found <a href="https://github.com/kkhan01/kkhan01.github.io/tree/master/_flask">here</a>, I'm able to use org files to write my posts and deploy almost seamlessly. Obviously I wouldn't recommend this setup to everyone, since it requires you to actually go through and understand every piece of code, since you may need to edit an obscure snippet to get a minor change. If enough people ask, and maybe a little team assembles, I'll happily try to create a standalone repository which anyone can fork and easily use as a template (I'm okay with anyone forking my current repository as long as they credit me somewhere and understand they won't be able to use it out-of-the-box).</p>
+<h1>Credit</h1>
+<p>I feel strongly about giving credit where it's due. The following is a list that contributed to the making of this site:</p>
 <ul>
-<li>Lists<ul>
-<li>test 2<ul>
-<li>test 3</li>
+<li><a href="https://github.com/larstvei">Lars Tveito's</a> melpa package <a href="https://github.com/larstvei/ox-gfm">ox-gfm</a>: I repurposed this github flavored markdown exporter to suit flask's markdown (I haven't made that changed package public yet). I also made a little <a href="https://raw.githubusercontent.com/kkhan01/elisp/master/org2md.el">script</a> to export org files in a directory to markdown.</li>
+<li><a href="https://lukemcdonald.com/">Luke McDonald's</a> image <a href="https://www.toptal.com/designers/subtlepatterns/debut-light/">Debut Light</a>: really awesome subtle pattern to ease the contrast. Using it as the background in my site right now.</li>
+<li><a href="https://github.com/insomnux">insomnux's</a> flaskblog: this was really just my starting point. Thanks to this, I found Frozen-Flask and was able to statically create my site instead of either buying a server or forgoing DRY development and copy pasting code like the navbar and footer (well technically&#x2026; the static build generated&#x2026; at least the templates are powerful and ease my workload).</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>More Lists<ul>
-<li>test 4</li>
-<li>yay</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>And block quotes</p>
-</blockquote>
-<p>And event highlighted code if you indent :)</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span>
-
-<span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-</pre></div>
-Numero Uno
-2015-08-27
+<h1>Final Note</h1>
+<p>Finally, I'll try to eventually maintain <em>at least</em> weekly posts (hopefully I'll be posting more than once a week), but I'm not sure how long it'll take me to reach that level. For now, I'll be posting whenever is convenient.</p>
+First Post!
+2019-05-01
 </div>
 
         </div>
