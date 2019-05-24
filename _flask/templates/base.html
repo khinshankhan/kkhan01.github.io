@@ -10,8 +10,10 @@
     {% block meta_tags %}
     {% endblock %}
 
-    <!-- Framework CSS -->
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
+    <!-- Materialize -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -75,8 +77,8 @@
     {% endwith %}
     {% endblock %}
 
-    <!-- Materialize JS for optimized loading -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Initialize all general materialize elements -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/initMaterialize.js') }}"></script>
@@ -87,18 +89,12 @@
       {% if messages %}
       {% for message in messages %}
       M.toast({
-	  html: '{{ message }}',
-	  displayLength: 4000
+	      html: '{{ message }}',
+	      displayLength: 4000
       });
       {% endfor %}
       {% endif %}
       {% endwith %}
-    </script>
-
-    <script>
-      $(document).ready(function(){
-
-      });
     </script>
 
     <!-- Custom Javascript -->
