@@ -5,19 +5,26 @@
     <!-- Required Meta Tags -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Khinshan Khan">
+    <meta name="keywords" content="Khinshan Khan, Stuyvesant, Daedalus, Computer Science" />
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
 
     <!-- Custom Meta Tags -->
     {% block meta_tags %}
+    <meta name="description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
+
+    <meta property="og:title" content="Khinshan Khan | Developer · Designer · Writer" />
+    <meta property="og:description" content="Hello! This is my personal blog, where I share interesting news, books I'm reading, tv shows/ anime I'm watching, prominent projects, and what I'm learning. You can also find a plethora of information on myself, or at least sources to them." />
     {% endblock %}
 
-    <!-- Materialize -->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    {% block material_fonts %}
     <!-- Material Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    {% endblock %}
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,8 +32,10 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/works/k_logo.jpeg')}}"/>
 
+    {% block jquery %}
     <!-- JQUERY -->
     <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    {% endblock %}
 
     <!-- Change the title of the page depending on what's being displayed -->
     <title>
@@ -47,11 +56,11 @@
 
   <body>
 
+    {% block body %}
+
     <!-- Navbar - Consistent across all pages-->
     {% block navbar %}
-    {% with c="" %}
     {% include "includes/navbar.html" %}
-    {% endwith %}
     {% endblock %}
 
     {% block all %}
@@ -72,9 +81,9 @@
 
     <!-- Footer - Consistent across all pages-->
     {% block footer %}
-    {% with c="" %}
     {% include "includes/footer.html" %}
-    {% endwith %}
+    {% endblock %}
+
     {% endblock %}
 
     <!-- Compiled and minified JavaScript -->
@@ -100,5 +109,6 @@
     <!-- Custom Javascript -->
     {% block scripts %}
     {% endblock %}
+
   </body>
 </html>
