@@ -1,5 +1,4 @@
-import sys
-import pygments, markdown
+import sys, pygments, markdown
 from flask import Flask, render_template, render_template_string, redirect, url_for, flash, request
 from flask_flatpages import FlatPages, pygmented_markdown, pygments_style_defs
 from flask_frozen import Freezer
@@ -21,30 +20,28 @@ app.config.from_object(__name__)
 flatpages = FlatPages(app)
 freezer = Freezer(app)
 
-PREFIX=""
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
 
 paths=["index", "about", "resume", "projects", "blog"]
 
-@app.route(PREFIX+'/')
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route(PREFIX+'/home/')
+@app.route('/home/')
 def home():
     this, routes = sys._getframe().f_code.co_name, paths[:]
     return render_template('home.html', pages=flatpages, this=this, routes=routes)
 
-@app.route(PREFIX+'/about/')
+@app.route('/about/')
 def about():
     this, routes = sys._getframe().f_code.co_name, paths[:]
     routes.remove(this)
     return render_template('about.html', this=this, routes=routes)
 
-@app.route(PREFIX+'/pygments.css')
-def pygments_css():
-    return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
-
-@app.route(PREFIX+"/posts/")
+@app.route("/posts/")
 def posts():
     this, routes = sys._getframe().f_code.co_name, paths[:]
 
@@ -53,13 +50,13 @@ def posts():
 
     return render_template('posts.html', posts=posts, this=this, routes=routes)
 
-@app.route(PREFIX+'/posts/<name>/')
+@app.route('/posts/<name>/')
 def post(name):
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post, this=post['title'], routes=paths)
 
-@app.route(PREFIX+"/tags/")
+@app.route("/tags/")
 def tags():
     this, routes = sys._getframe().f_code.co_name, paths[:]
 
@@ -71,18 +68,18 @@ def tags():
 
     return render_template('tags.html', tags=tags, this=this, routes=routes)
 
-@app.route(PREFIX+'/tag/<string:tag>/')
+@app.route('/tag/<string:tag>/')
 def tag(tag):
     tagged = [p for p in flatpages if tag in p.meta.get('tags', [])]
     return render_template('tag.html', posts=tagged, tags=tagged, tagg=tag, this=tag, routes=paths)
 
-@app.route(PREFIX+'/projects/')
+@app.route('/projects/')
 def projects():
     this, routes = sys._getframe().f_code.co_name, paths[:]
     routes.remove(this)
     return render_template('projects.html', this=this, routes=routes)
 
-@app.route(PREFIX+'/404.html')
+@app.route('/404.html')
 def page_not_found():
     this, routes = sys._getframe().f_code.co_name, paths[:]
     return render_template("404.html", this=this.replace("_", " "), routes=routes)
