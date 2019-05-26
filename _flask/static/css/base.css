@@ -78,9 +78,9 @@ footer.page-footer {
 
 footer {
     background-color: #eceff1;
-    background:  url('/static/img/works/mini-tenor.jpg');
+    background:  url('/static/img/works/constellation-1851128_1920.jpg');
     background-repeat: repeat-x;
-    background-position: top;
+    background-position: top right;
 }
 
 .social [class*="fab fa-"] {
