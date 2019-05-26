@@ -17,7 +17,7 @@
 #descr: The first of many posts. Details about the website here.
 #tags: [intro, volatile]
 
-* 
+*
 ** Mini Prelude
 Well I guess to start with, it may be important to note that this post was actually backdated a little. This backdating doesn't have malicious intents like [[https://www.lumendatabase.org/blog_entries/800][some companies do]], it's meant to keep this post in the beginning as it outlines how my website will work.
 
@@ -45,6 +45,7 @@ I feel strongly about giving credit where it's due. The following is a list that
 - [[https://github.com/larstvei][Lars Tveito's]] melpa package [[https://github.com/larstvei/ox-gfm][ox-gfm]]: I repurposed this github flavored markdown exporter to suit flask's markdown (I haven't made that changed package public yet). I also made a little [[https://raw.githubusercontent.com/kkhan01/elisp/master/org2md.el][script]] to export org files in a directory to markdown.
 - [[https://lukemcdonald.com/][Luke McDonald's]] image [[https://www.toptal.com/designers/subtlepatterns/debut-light/][Debut Light]]: really awesome subtle pattern to ease the contrast. Using it as the background in my site right now.
 - [[https://github.com/insomnux][insomnux's]] flaskblog: this was really just my starting point. Thanks to this, I found Frozen-Flask and was able to statically create my site instead of either buying a server or forgoing DRY development and copy pasting code like the navbar and footer (well technically... the static build generated... at least the templates are powerful and ease my workload).
+- [[https://pixabay.com/users/pexels-2286921/][Pexels']] [[https://pixabay.com/photos/constellation-cosmos-dark-1851128/][constellation]]: cool image, using it as my background for this site as of now.
 
 
 ** Final Note
