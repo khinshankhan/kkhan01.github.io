@@ -1,128 +1,129 @@
-<header>
+<header class="masthead" style="background-image: url('/static/img/works/constellation-1851128_1920.jpg')">
 
-  <!-- Desktop Dropdown -->
-  <ul id="dropdown1" class="dropdown-content normthick">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <!-- Desktop Dropdown -->
+          <ul id="dropdown1" class="dropdown-content normthick">
 
-    {% if this != "posts" %}
-    <li><a class="center" href="{{ url_for('posts') }}">Posts</a></li>
-    {% endif %}
+            {% if this != "posts" %}
+            <li><a class="center" href="{{ url_for('posts') }}">Posts</a></li>
+            {% endif %}
 
-    {% if this != "tags" %}
-    <li><a class="center" href="{{ url_for('tags') }}">Tags</a></li>
-    {% endif %}
+            {% if this != "tags" %}
+            <li><a class="center" href="{{ url_for('tags') }}">Tags</a></li>
+            {% endif %}
 
-  </ul>
+          </ul>
 
-  <!-- Mobile Dropdown -->
-  <ul id="dropdown2" class="dropdown-content">
+          <!-- Mobile Dropdown -->
+          <ul id="dropdown2" class="dropdown-content">
 
-    {% if this != "posts" %}
-    <li><a class="center" href="{{ url_for('posts') }}">Posts</a></li>
-    {% endif %}
+            {% if this != "posts" %}
+            <li><a class="center" href="{{ url_for('posts') }}">Posts</a></li>
+            {% endif %}
 
-    {% if this != "tags" %}
-    <li><a class="center" href="{{ url_for('tags') }}">Tags</a></li>
-    {% endif %}
+            {% if this != "tags" %}
+            <li><a class="center" href="{{ url_for('tags') }}">Tags</a></li>
+            {% endif %}
 
-  </ul>
+          </ul>
 
-  <!-- Desktop Navbar -->
-  <div class="hide-on-small-only">
-    <div class="parallax-container center valign-wrapper">
-      <div class="container">
-	<div class="row">
-	  <div class="col s12 white-text purpleoutline mylink">
+          <!-- Desktop Navbar -->
+          <div class="hide-on-small-only">
+            <div class="parallax-container center valign-wrapper">
+              <div class="container">
+	            <div class="row">
+	              <div class="col s12 white-text purpleoutline mylink">
 
-	    <h2 class="teal-text white-text lighten-2 upper thick">
-	      {{this}}
-	    </h2>
+	                <h2 class="teal-text white-text lighten-2 upper thick">
+	                  {{this}}
+	                </h2>
 
-	    <hr style="color:white;">
-	    <br>
+	                <hr style="color:white;">
+	                <br>
 
-	    <div class="upper" style="display: flex;justify-content: space-around;">
-	      {% for route in routes %}
+	                <div class="upper" style="display: flex;justify-content: space-around;">
+	                  {% for route in routes %}
 
-	      <div>
+	                  <div>
 
-		{% if route == "index" %}
-		<a href="{{ url_for(route) }}"> Home </a>
+		                {% if route == "index" %}
+		                <a href="{{ url_for(route) }}"> Home </a>
 
-		{% elif route == "resume" %}
-		<a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a>
+		                {% elif route == "resume" %}
+		                <a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a>
 
-		{% elif route == "blog" %}
-		<a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a>
+		                {% elif route == "blog" %}
+		                <a class="dropdown-trigger" href="#!" data-target="dropdown1">Blog<i class="material-icons right">arrow_drop_down</i></a>
 
-		{% else %}
-		<a href="{{ url_for(route) }}"> {{route}} </a>
-		{% endif %}
+		                {% else %}
+		                <a href="{{ url_for(route) }}"> {{route}} </a>
+		                {% endif %}
 
-	      </div>
+	                  </div>
 
-	      {% endfor %}
+	                  {% endfor %}
 
 
-	    </div>
+	                </div>
 
-	  </div>
-	</div>
+	              </div>
+	            </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Mobile Navbar -->
+          <div class="hide-on-med-and-up">
+            <div class="parallax-container">
+
+              <ul id="nav-mobile" class="sidenav">
+
+	            {% for route in routes %}
+
+	            <div>
+
+	              {% if route == "index" %}
+	              <li><a href="{{ url_for(route) }}"> Home </a></li>
+
+	              {% elif route == "resume" %}
+	              <li><a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a></li>
+
+	              {% elif route == "blog" %}
+	              <li> <a class="dropdown-trigger" href="#!" data-target="dropdown2">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
+
+	              {% else %}
+	              <li><a style="text-transform: capitalize;" href="{{ url_for(route) }}"> {{route}} </a></li>
+	              {% endif %}
+
+	            </div>
+
+	            {% endfor %}
+              </ul>
+
+              <a href="#" data-target="nav-mobile" class="sidenav-trigger" style="color:#FFF !important;"><i class="material-icons">menu</i></a>
+
+              <div class="center">
+	            <br><br><br><br>
+	            <div class="col s12 white-text purpleoutline mylink">
+	              <h2 class="center teal-text white-text lighten-2 upper thick">
+	                {{this}}
+	              </h2>
+	              <br>
+	            </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </div>
-
-      <div class="parallax">
-	<img class="left" src="/static/img/works/constellation-1851128_1920.jpg">
-      </div>
-
     </div>
   </div>
-
-
-  <!-- Mobile Navbar -->
-  <div class="hide-on-med-and-up">
-    <div class="parallax-container">
-
-      <ul id="nav-mobile" class="sidenav">
-
-	{% for route in routes %}
-
-	<div>
-
-	  {% if route == "index" %}
-	  <li><a href="{{ url_for(route) }}"> Home </a></li>
-
-	  {% elif route == "resume" %}
-	  <li><a href="https://khinshankhan.com/resume/resume.pdf"> Resume </a></li>
-
-	  {% elif route == "blog" %}
-	  <li> <a class="dropdown-trigger" href="#!" data-target="dropdown2">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
-
-	  {% else %}
-	  <li><a style="text-transform: capitalize;" href="{{ url_for(route) }}"> {{route}} </a></li>
-	  {% endif %}
-
-	</div>
-
-	{% endfor %}
-      </ul>
-
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger" style="color:#FFF !important;"><i class="material-icons">menu</i></a>
-
-      <div class="center">
-	<br><br><br><br>
-	<div class="col s12 white-text purpleoutline mylink">
-	  <h2 class="center teal-text white-text lighten-2 upper thick">
-	    {{this}}
-	  </h2>
-	  <br>
-	</div>
-      </div>
-
-      <div class="parallax">
-	<img class="left" src="/static/img/works/constellation-1851128_1920.jpg">
-      </div>
-
-    </div>
-
-  </div>
-
 </header>
