@@ -17,7 +17,7 @@
 #descr: The first of many posts. Details about the website here.
 #tags: [intro, volatile]
 
-*
+* 
 ** Mini Prelude
 Well I guess to start with, it may be important to note that this post was actually backdated a little. This backdating doesn't have malicious intents like [[https://www.lumendatabase.org/blog_entries/800][some companies do]], it's meant to keep this post in the beginning as it outlines how my website will work.
 
