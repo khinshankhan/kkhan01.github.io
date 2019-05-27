@@ -10,9 +10,3 @@ $('.dropdown-trigger').dropdown({
     belowOrigin: true, // Displays dropdown below the button
     coverTrigger:false //dont cover the trigger
 });
-
-//collapsible
-$(document).ready(function(){
-    $('.parallax').parallax();
-    $('.collapsible').collapsible();
-});
