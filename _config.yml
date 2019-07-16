@@ -1,0 +1,17 @@
+# Site settings
+title:             Khinshan Khan
+email:             khinshan.khan@gmail.com
+author:            Khinshan Khan
+baseurl:           "/"
+url: "http://khinshankhan.com"
+
+# Build settings
+theme: minima
+# Build settings
+paginate:          5
+paginate_path:     "/posts/page:num/"
+plugins:
+  # - jekyll-feed
+  # - jekyll-paginate
+  # - jemoji
+  # - jekyll-org
