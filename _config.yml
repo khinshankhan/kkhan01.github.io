@@ -1,17 +1,55 @@
-# Site settings
-title:             Khinshan Khan
-email:             khinshan.khan@gmail.com
-author:            Khinshan Khan
-baseurl:           "/"
-url: "http://khinshankhan.com"
+# Set theme
+theme: alembic-jekyll-theme
 
-# Build settings
-theme: minima
-# Build settings
-paginate:          5
-paginate_path:     "/posts/page:num/"
+# File excludes
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+
+# Set plugins
 plugins:
-  # - jekyll-feed
-  # - jekyll-paginate
-  # - jemoji
-  # - jekyll-org
+- jekyll-sitemap
+- jekyll-mentions
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-redirect-from
+- jekyll-default-layout
+- jekyll-feed
+- jemoji
+- jekyll-org
+
+# Site settings
+url: 'http://khinshankhan.com'
+baseurl: ''
+author:            Khinshan Khan
+title: "Khinshan Khan"
+description: ''
+permalink: pretty
+logo:
+
+# Pagination
+paginate: 5
+paginate_path: blog/page:num
+
+# Header nav
+navigation_header:
+  Home: /
+  Blog: /blog/
+  About: /about/
+
+# Footer nav
+navigation_footer:
+- title:
+
+# Collections
+collections:
+  posts:
+    title: Posts
+    output: true
+    feature_text: |
+    feature_image:
+
+social_links:
+  GitHub: https://github.com/kkhan01
+RSS: /feed.xml
