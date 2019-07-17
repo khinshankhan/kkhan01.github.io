@@ -4,10 +4,13 @@ theme: alembic-jekyll-theme
 # File excludes
 exclude:
 - README.md
+- CNAME
+- LICENSE
 - Gemfile
 - Gemfile.lock
 
 # Set plugins
+plugins_dir: ./_scripts
 plugins:
 - jekyll-sitemap
 - jekyll-mentions
@@ -18,6 +21,7 @@ plugins:
 - jekyll-feed
 - jemoji
 - jekyll-org
+- github-pages
 
 # Site settings
 url: 'http://khinshankhan.com'
