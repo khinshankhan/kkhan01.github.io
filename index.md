@@ -1,11 +1,9 @@
 ---
-title: Welcome
+title: Welcome to my website
 layout: page
-feature_image: "http://getwallpapers.com/wallpaper/full/1/5/1/629812.jpg"
-aside: true
+feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
-
+  ## Hello world
 ---
-yeetus reetus
 
-{% include figure.html image="http://www.rendertom.com/wordpress/wp-content/uploads/coffee/coffee-700x400.gif" alt="Coffee Tiem" %}
+There isn't much going on here yet, but watch this space

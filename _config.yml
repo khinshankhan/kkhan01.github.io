@@ -1,16 +1,13 @@
 # Set theme
-theme: alembic-jekyll-theme
+remote_theme: daviddarnes/alembic
 
 # File excludes
 exclude:
 - README.md
-- CNAME
-- LICENSE
 - Gemfile
 - Gemfile.lock
 
 # Set plugins
-plugins_dir: ./_scripts
 plugins:
 - jekyll-sitemap
 - jekyll-mentions
@@ -20,40 +17,40 @@ plugins:
 - jekyll-default-layout
 - jekyll-feed
 - jemoji
-- jekyll-org
-- github-pages
+- jekyll-remote-theme
 
 # Site settings
-url: 'http://khinshankhan.com'
+url: 'https://khinshankhan.com'
 baseurl: ''
-author: Khinshan Khan
-title: "Khinshan Khan"
-description: ''
+title: 'Khinshan Khan'
+description: 'This is my new website'
 permalink: pretty
-logo:
+logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
 
 # Pagination
 paginate: 5
-paginate_path: blog/page/:num
+paginate_path: blog/page:num
 
 # Header nav
 navigation_header:
-  Home: /
-  Blog: /blog/
-  About: /about/
+- title: Home
+  url: /
+- title: About
+  url: /about/
+- title: Blog
+  url: /blog/
 
 # Footer nav
 navigation_footer:
-- title:
+- title: Back to top
+  url: "#top"
 
 # Collections
 collections:
   posts:
     title: Posts
     output: true
+    description: "My thoughts and ideas"
     feature_text: |
-    feature_image:
-
-social_links:
-  GitHub: https://github.com/kkhan01
-RSS: /feed.xml
+      Welcome to my blog
+    feature_image: "https://picsum.photos/2560/600?image=866"
