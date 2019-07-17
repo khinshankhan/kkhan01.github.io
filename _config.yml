@@ -18,6 +18,7 @@ plugins:
 - jekyll-feed
 - jemoji
 - jekyll-remote-theme
+- jekyll-org
 
 # Site settings
 url: 'https://khinshankhan.com'
